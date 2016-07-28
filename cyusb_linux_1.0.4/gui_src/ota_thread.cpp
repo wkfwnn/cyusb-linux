@@ -124,8 +124,8 @@ int Ota_Thread::ota_upgrade(QString fileName)
                     goto err_out;
                 }
             }
-            printf("sending firmware [0x%08x - 0x%08x]...\n",
-                    offset, offset+ISP_FLASH_SECTOR_SIZE);
+           // printf("sending firmware [0x%08x - 0x%08x]...\n",
+                  //  offset, offset+ISP_FLASH_SECTOR_SIZE);
             qDebug("sending firmware [0x%08x - 0x%08x]...\n",
                     offset, offset+ISP_FLASH_SECTOR_SIZE);
             emit sendStatus(QString("sending firmware...."),offset*100/(ISP_FLASH_SECTORS * ISP_FLASH_SECTOR_SIZE)+1);
@@ -154,7 +154,7 @@ int Ota_Thread::ota_upgrade(QString fileName)
         }
 
         qDebug("OTA upgrade complete\n");
-        emit sendStatus(QString("OTA upgrade complete"),0);
+        emit sendStatus(QString("OTA upgrade ok"),0);
         close(fd);
         return (0);
 

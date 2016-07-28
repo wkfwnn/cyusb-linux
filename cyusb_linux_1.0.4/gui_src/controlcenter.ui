@@ -58,6 +58,9 @@
    </property>
   </widget>
   <widget class="QTabWidget" name="tab1">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>-10</x>
@@ -70,19 +73,19 @@
     <enum>QTabWidget::Rounded</enum>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="tab_3">
     <attribute name="title">
-     <string>Program</string>
+     <string>程序下载</string>
     </attribute>
     <widget class="QTabWidget" name="tab2">
      <property name="geometry">
       <rect>
        <x>0</x>
        <y>10</y>
-       <width>841</width>
-       <height>331</height>
+       <width>851</width>
+       <height>351</height>
       </rect>
      </property>
      <property name="currentIndex">
@@ -275,9 +278,9 @@
        <property name="geometry">
         <rect>
          <x>220</x>
-         <y>40</y>
+         <y>90</y>
          <width>611</width>
-         <height>251</height>
+         <height>201</height>
         </rect>
        </property>
        <property name="font">
@@ -286,46 +289,30 @@
         </font>
        </property>
       </widget>
-      <widget class="QLabel" name="label4_file">
-       <property name="geometry">
-        <rect>
-         <x>320</x>
-         <y>0</y>
-         <width>511</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="frameShape">
-        <enum>QFrame::Box</enum>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
       <widget class="QPushButton" name="pb4_selfile">
        <property name="geometry">
         <rect>
-         <x>100</x>
-         <y>200</y>
-         <width>111</width>
+         <x>90</x>
+         <y>190</y>
+         <width>121</width>
          <height>27</height>
         </rect>
        </property>
        <property name="text">
-        <string>Select File</string>
+        <string>选择 Flash 文件</string>
        </property>
       </widget>
       <widget class="QPushButton" name="pb4_start">
        <property name="geometry">
         <rect>
-         <x>100</x>
+         <x>90</x>
          <y>230</y>
-         <width>111</width>
+         <width>121</width>
          <height>27</height>
         </rect>
        </property>
        <property name="text">
-        <string>Start Download</string>
+        <string>开始下载</string>
        </property>
       </widget>
       <widget class="QPushButton" name="pb4_clear">
@@ -338,20 +325,7 @@
         </rect>
        </property>
        <property name="text">
-        <string>clear</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_23">
-       <property name="geometry">
-        <rect>
-         <x>220</x>
-         <y>10</y>
-         <width>91</width>
-         <height>16</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Selected File</string>
+        <string>清除</string>
        </property>
       </widget>
       <widget class="QGroupBox" name="groupBox_5">
@@ -364,7 +338,7 @@
         </rect>
        </property>
        <property name="title">
-        <string>Download to -&gt;</string>
+        <string>下载到-&gt;</string>
        </property>
        <widget class="QRadioButton" name="rb4_ram">
         <property name="geometry">
@@ -406,12 +380,41 @@
         </property>
        </widget>
       </widget>
+      <widget class="QLabel" name="label_39">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>30</y>
+         <width>121</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>选择flash文件</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label4_file">
+       <property name="geometry">
+        <rect>
+         <x>330</x>
+         <y>20</y>
+         <width>511</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Box</enum>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
      </widget>
     </widget>
    </widget>
    <widget class="QWidget" name="tab_10">
     <attribute name="title">
-     <string>Ispdownload</string>
+     <string>Isp下载</string>
     </attribute>
     <widget class="QProgressBar" name="progressBar">
      <property name="geometry">
@@ -465,7 +468,7 @@
       <item>
        <widget class="QLabel" name="label_42">
         <property name="text">
-         <string>current firmware file</string>
+         <string>当前文件</string>
         </property>
        </widget>
       </item>
@@ -490,7 +493,7 @@
          </font>
         </property>
         <property name="text">
-         <string>Download</string>
+         <string>下载</string>
         </property>
        </widget>
       </item>
@@ -499,7 +502,7 @@
    </widget>
    <widget class="QWidget" name="tab_9">
     <attribute name="title">
-     <string>Display</string>
+     <string>显示</string>
     </attribute>
     <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
@@ -1626,7 +1629,7 @@
       </rect>
      </property>
      <property name="currentIndex">
-      <number>1</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="tab_7">
       <attribute name="title">
@@ -2900,7 +2903,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Reset To Downmode</string>
+    <string>擦flash</string>
    </property>
   </widget>
  </widget>

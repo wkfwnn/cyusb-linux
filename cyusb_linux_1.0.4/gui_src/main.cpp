@@ -211,24 +211,42 @@ void ControlCenter::on_pb4_selfile_clicked()
 void ControlCenter::on_pb4_start_clicked()
 {
 	int r = 0;
-
+#if 0
 	if ( mainwin->rb4_ram->isChecked() ) 
-		r = fx3_usbboot_download(qPrintable(mainwin->label4_file->text()));
+        r = fx3_usbboot_download(qPrintable(QString("../fx3_images/cyfxflashprog.img")));
 	else if ( mainwin->rb4_i2c->isChecked() ) 
 		r = fx3_i2cboot_download(qPrintable(mainwin->label4_file->text()));
 	else if ( mainwin->rb4_spi->isChecked() ) 
 		r = fx3_spiboot_download(qPrintable(mainwin->label4_file->text()));
-
+#endif
+     mainwin->rb4_spi->setChecked(true);
+    QDir dir;
+    QString path = dir.currentPath();
+    path = path + QString("/cyfxflashprog.img");
+    qDebug() << path;
+      r = fx3_usbboot_download(qPrintable(path));
 	if ( r ) {
 		QMessageBox mb;
-		mb.setText("Error in download");
+        mb.setText("download fail..");
 		mb.exec();
 	}
 	else {
 		QMessageBox mb;
-		mb.setText("Successfully downloaded");
+        mb.setText("prepare download");
 		mb.exec();
-	}
+    }
+
+    r = fx3_spiboot_download(qPrintable(mainwin->label4_file->text()));
+    if ( r ) {
+        QMessageBox mb;
+        mb.setText("download fail");
+        mb.exec();
+    }
+    else {
+        QMessageBox mb;
+        mb.setText("download ok");
+        mb.exec();
+    }
 }
 
 void ControlCenter::on_pb4_clear_clicked()
@@ -799,7 +817,7 @@ void ControlCenter::on_pb_reset_clicked()
 	mb.setText("Device reset");
 	mb.exec();
 #endif
-    reset_device();
+ //   reset_device();
 }
 
 void ControlCenter::on_rb3_ramdl_clicked()
@@ -1961,7 +1979,7 @@ int main(int argc, char **argv)
 	mainwin = new ControlCenter;
 	QMainWindow *mw = new QMainWindow(0);
 	mw->setCentralWidget(mainwin);
-	QIcon *qic = new QIcon("cypress.png");
+    QIcon *qic = new QIcon("llvison.png");
 	app.setWindowIcon(*qic);
 	set_tool_tips();
 	mw->setFixedSize(880, 660);

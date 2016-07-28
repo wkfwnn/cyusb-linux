@@ -128,7 +128,6 @@ int display_control(int cmd, int par, unsigned char* out)
 {
 
     int fd, rc;
-    static int flag = 0;
 
     uint8_t buf[64];
     struct hid_msg *msg;
@@ -136,14 +135,12 @@ int display_control(int cmd, int par, unsigned char* out)
     char cmd_type = 0;
     char msg_cmd = 0;
 
-    if(flag == 0){
+
     fd = open_cx3(0x05);
         if (fd < 0) {
             printf("failed to open brt  HID device\n");
             return (fd);
         }
-      flag = 1;
-    }
 
     msg = (struct hid_msg *) buf;
     msg->magic = HID_MSG_MAGIC;

@@ -31,6 +31,8 @@ ControlCenter::ControlCenter(QWidget *parent) : QWidget(parent)
     connect(mThread,SIGNAL(sendStatus(QString,int)),this,SLOT(receiveOtaThreadStatus(QString,int)));
     this->progressBar->hide();
     this->statusLabel->hide();
+    this->rb4_spi->setChecked(true);
+    this->tab2->setTabEnabled(0,false);
 
 	if ( socketpair(AF_UNIX, SOCK_STREAM, 0, sigusr1_fd) )
 	   qFatal("Couldn't create SIGUSR1 socketpair");
