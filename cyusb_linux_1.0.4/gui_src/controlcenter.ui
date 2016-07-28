@@ -60,8 +60,8 @@
   <widget class="QTabWidget" name="tab1">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>160</y>
+     <x>-10</x>
+     <y>170</y>
      <width>871</width>
      <height>476</height>
     </rect>
@@ -70,262 +70,8 @@
     <enum>QTabWidget::Rounded</enum>
    </property>
    <property name="currentIndex">
-    <number>5</number>
+    <number>1</number>
    </property>
-   <widget class="QWidget" name="tab">
-    <attribute name="title">
-     <string>Descriptors</string>
-    </attribute>
-    <widget class="QListWidget" name="lw_desc">
-     <property name="geometry">
-      <rect>
-       <x>420</x>
-       <y>10</y>
-       <width>441</width>
-       <height>421</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>DejaVu Sans Mono</family>
-      </font>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pb_clear">
-     <property name="geometry">
-      <rect>
-       <x>360</x>
-       <y>10</y>
-       <width>51</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Clear</string>
-     </property>
-    </widget>
-    <widget class="QGroupBox" name="groupBox">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>0</y>
-       <width>341</width>
-       <height>161</height>
-      </rect>
-     </property>
-     <property name="autoFillBackground">
-      <bool>false</bool>
-     </property>
-     <property name="title">
-      <string>Interface</string>
-     </property>
-     <property name="flat">
-      <bool>false</bool>
-     </property>
-     <widget class="QLabel" name="label_4">
-      <property name="geometry">
-       <rect>
-        <x>11</x>
-        <y>21</y>
-        <width>91</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Num.of Ifaces</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="le_numIfaces">
-      <property name="geometry">
-       <rect>
-        <x>110</x>
-        <y>20</y>
-        <width>31</width>
-        <height>25</height>
-       </rect>
-      </property>
-      <property name="readOnly">
-       <bool>true</bool>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_5">
-      <property name="geometry">
-       <rect>
-        <x>141</x>
-        <y>24</y>
-        <width>81</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Select Iface</string>
-      </property>
-     </widget>
-     <widget class="QSpinBox" name="sb_selectIf">
-      <property name="geometry">
-       <rect>
-        <x>220</x>
-        <y>20</y>
-        <width>41</width>
-        <height>25</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_6">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>100</y>
-        <width>181</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Num.of alternate interfaces</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="le_numAlt">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>100</y>
-        <width>31</width>
-        <height>25</height>
-       </rect>
-      </property>
-      <property name="readOnly">
-       <bool>true</bool>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_7">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>130</y>
-        <width>171</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Select Alternate Interface</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="cb_kerneldriver">
-      <property name="enabled">
-       <bool>true</bool>
-      </property>
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>50</y>
-        <width>141</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Interface claimed</string>
-      </property>
-      <property name="checkable">
-       <bool>true</bool>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pb_kerneldetach">
-      <property name="geometry">
-       <rect>
-        <x>160</x>
-        <y>50</y>
-        <width>90</width>
-        <height>27</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Detach</string>
-      </property>
-     </widget>
-     <widget class="QSpinBox" name="sb_selectAIf">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>130</y>
-        <width>41</width>
-        <height>25</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pb_setIFace">
-      <property name="geometry">
-       <rect>
-        <x>260</x>
-        <y>20</y>
-        <width>71</width>
-        <height>27</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Set IFace</string>
-      </property>
-     </widget>
-     <widget class="Line" name="line">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>80</y>
-        <width>311</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pb_setAltIf">
-      <property name="geometry">
-       <rect>
-        <x>250</x>
-        <y>130</y>
-        <width>71</width>
-        <height>27</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Set Alt.IF</string>
-      </property>
-     </widget>
-    </widget>
-    <widget class="QListWidget" name="lw_summ">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>180</y>
-       <width>401</width>
-       <height>251</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>DejaVu Sans Mono</family>
-      </font>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_21">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>160</y>
-       <width>391</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>DejaVu Sans Mono</family>
-      </font>
-     </property>
-     <property name="text">
-      <string> If#    Alt    EP#    I/O    Type   MaxPS  Interval</string>
-     </property>
-    </widget>
-   </widget>
    <widget class="QWidget" name="tab_3">
     <attribute name="title">
      <string>Program</string>
@@ -661,6 +407,682 @@
        </widget>
       </widget>
      </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_10">
+    <attribute name="title">
+     <string>Ispdownload</string>
+    </attribute>
+    <widget class="QProgressBar" name="progressBar">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>420</y>
+       <width>861</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="value">
+      <number>24</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="statusLabel">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>380</y>
+       <width>351</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_43">
+     <property name="geometry">
+      <rect>
+       <x>434</x>
+       <y>41</y>
+       <width>205</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>41</y>
+       <width>761</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QLabel" name="label_42">
+        <property name="text">
+         <string>current firmware file</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="fileNameSelectButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="downloadButton">
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Download</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_9">
+    <attribute name="title">
+     <string>Display</string>
+    </attribute>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>10</y>
+       <width>861</width>
+       <height>431</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QGroupBox" name="groupBox_9">
+        <property name="title">
+         <string>ScreenControl</string>
+        </property>
+        <widget class="QWidget" name="layoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>90</y>
+           <width>181</width>
+           <height>261</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <widget class="QPushButton" name="screenOffButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>screenOff</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="screenOnButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>screenOn</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_10">
+        <property name="title">
+         <string>LuminaceControl</string>
+        </property>
+        <widget class="QWidget" name="layoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>90</y>
+           <width>271</width>
+           <height>221</height>
+          </rect>
+         </property>
+         <layout class="QGridLayout" name="gridLayout">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_33">
+            <property name="text">
+             <string>currentLum</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="curLumLineEdit">
+            <property name="readOnly">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_34">
+            <property name="text">
+             <string>minLum</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="minLumLineEdit">
+            <property name="readOnly">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_38">
+            <property name="text">
+             <string>maxLum</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="maxLumLineEdit">
+            <property name="readOnly">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="label_40">
+            <property name="text">
+             <string>setLum</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QLineEdit" name="setLumLineEdit"/>
+          </item>
+          <item row="4" column="0" colspan="2">
+           <widget class="QSlider" name="horizontalSlider">
+            <property name="minimum">
+             <number>1</number>
+            </property>
+            <property name="maximum">
+             <number>255</number>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="layoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>320</y>
+           <width>271</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QPushButton" name="getPushButton">
+            <property name="text">
+             <string>GET</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="setPushButton">
+            <property name="text">
+             <string>SET</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_11">
+        <property name="title">
+         <string>ModeSet</string>
+        </property>
+        <widget class="QRadioButton" name="cd_120RadioButton">
+         <property name="geometry">
+          <rect>
+           <x>161</x>
+           <y>102</y>
+           <width>75</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>120cd</string>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="cd_300RadioButton">
+         <property name="geometry">
+          <rect>
+           <x>161</x>
+           <y>182</y>
+           <width>75</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>300cd</string>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="cd_500RadioButton">
+         <property name="geometry">
+          <rect>
+           <x>161</x>
+           <y>222</y>
+           <width>75</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>500cd</string>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="cd_200RadioButton">
+         <property name="geometry">
+          <rect>
+           <x>161</x>
+           <y>142</y>
+           <width>75</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>200cd</string>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="cd_800RadioButton">
+         <property name="geometry">
+          <rect>
+           <x>161</x>
+           <y>262</y>
+           <width>75</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>800cd</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_41">
+         <property name="geometry">
+          <rect>
+           <x>11</x>
+           <y>577</y>
+           <width>121</width>
+           <height>18</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>manualModeset</string>
+         </property>
+        </widget>
+        <widget class="Line" name="line_3">
+         <property name="geometry">
+          <rect>
+           <x>11</x>
+           <y>568</y>
+           <width>529</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="checkBox">
+         <property name="geometry">
+          <rect>
+           <x>279</x>
+           <y>577</y>
+           <width>80</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>enable</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_4">
+         <property name="geometry">
+          <rect>
+           <x>21</x>
+           <y>311</y>
+           <width>132</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>manulModeSet</string>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="enbaleManRadioButton">
+         <property name="geometry">
+          <rect>
+           <x>159</x>
+           <y>313</y>
+           <width>80</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>enable</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_3">
+         <property name="geometry">
+          <rect>
+           <x>21</x>
+           <y>111</y>
+           <width>129</width>
+           <height>181</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>persetModeSet</string>
+         </property>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab">
+    <attribute name="title">
+     <string>Descriptors</string>
+    </attribute>
+    <widget class="QListWidget" name="lw_desc">
+     <property name="geometry">
+      <rect>
+       <x>420</x>
+       <y>10</y>
+       <width>441</width>
+       <height>421</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>DejaVu Sans Mono</family>
+      </font>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_clear">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>10</y>
+       <width>51</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Clear</string>
+     </property>
+    </widget>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>0</y>
+       <width>341</width>
+       <height>161</height>
+      </rect>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="title">
+      <string>Interface</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>21</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Num.of Ifaces</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="le_numIfaces">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>20</y>
+        <width>31</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>141</x>
+        <y>24</y>
+        <width>81</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Select Iface</string>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="sb_selectIf">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>20</y>
+        <width>41</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>100</y>
+        <width>181</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Num.of alternate interfaces</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="le_numAlt">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>100</y>
+        <width>31</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>130</y>
+        <width>171</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Select Alternate Interface</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="cb_kerneldriver">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>50</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Interface claimed</string>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pb_kerneldetach">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>50</y>
+        <width>90</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Detach</string>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="sb_selectAIf">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>130</y>
+        <width>41</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pb_setIFace">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>20</y>
+        <width>71</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Set IFace</string>
+      </property>
+     </widget>
+     <widget class="Line" name="line">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>80</y>
+        <width>311</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pb_setAltIf">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>130</y>
+        <width>71</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Set Alt.IF</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QListWidget" name="lw_summ">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>180</y>
+       <width>401</width>
+       <height>251</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>DejaVu Sans Mono</family>
+      </font>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_21">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>160</y>
+       <width>391</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>DejaVu Sans Mono</family>
+      </font>
+     </property>
+     <property name="text">
+      <string> If#    Alt    EP#    I/O    Type   MaxPS  Interval</string>
+     </property>
     </widget>
    </widget>
    <widget class="QWidget" name="tab_6">
@@ -2319,378 +2741,6 @@
      </widget>
     </widget>
    </widget>
-   <widget class="QWidget" name="tab_9">
-    <attribute name="title">
-     <string>Display</string>
-    </attribute>
-    <widget class="QWidget" name="">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>10</y>
-       <width>861</width>
-       <height>431</height>
-      </rect>
-     </property>
-     <layout class="QHBoxLayout" name="horizontalLayout">
-      <item>
-       <widget class="QGroupBox" name="groupBox_9">
-        <property name="title">
-         <string>ScreenControl</string>
-        </property>
-        <widget class="QWidget" name="">
-         <property name="geometry">
-          <rect>
-           <x>40</x>
-           <y>90</y>
-           <width>181</width>
-           <height>261</height>
-          </rect>
-         </property>
-         <layout class="QVBoxLayout" name="verticalLayout">
-          <item>
-           <widget class="QPushButton" name="pushButton">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="text">
-             <string>screenOff</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="pushButton_2">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="text">
-             <string>screenOn</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </widget>
-        <zorder>pushButton</zorder>
-        <zorder>pushButton_2</zorder>
-        <zorder>groupBox_10</zorder>
-        <zorder>groupBox_10</zorder>
-       </widget>
-      </item>
-      <item>
-       <widget class="QGroupBox" name="groupBox_10">
-        <property name="title">
-         <string>LuminaceControl</string>
-        </property>
-        <widget class="QWidget" name="">
-         <property name="geometry">
-          <rect>
-           <x>20</x>
-           <y>92</y>
-           <width>251</width>
-           <height>261</height>
-          </rect>
-         </property>
-         <layout class="QGridLayout" name="gridLayout">
-          <item row="0" column="0">
-           <widget class="QLabel" name="label_33">
-            <property name="text">
-             <string>currentLum</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="1">
-           <widget class="QLineEdit" name="lineEdit"/>
-          </item>
-          <item row="1" column="0">
-           <widget class="QLabel" name="label_34">
-            <property name="text">
-             <string>minLum</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="1">
-           <widget class="QLineEdit" name="lineEdit_2"/>
-          </item>
-          <item row="2" column="0">
-           <widget class="QLabel" name="label_38">
-            <property name="text">
-             <string>maxLum</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="1">
-           <widget class="QLineEdit" name="lineEdit_3"/>
-          </item>
-          <item row="3" column="0">
-           <widget class="QLabel" name="label_40">
-            <property name="text">
-             <string>setLum</string>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="1">
-           <widget class="QLineEdit" name="lineEdit_6"/>
-          </item>
-          <item row="4" column="0" colspan="2">
-           <widget class="QSlider" name="horizontalSlider">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </widget>
-        <zorder>horizontalSlider</zorder>
-        <zorder>label_33</zorder>
-        <zorder>lineEdit</zorder>
-        <zorder>label_34</zorder>
-        <zorder>lineEdit_2</zorder>
-        <zorder>label_38</zorder>
-        <zorder>lineEdit_3</zorder>
-        <zorder>label_39</zorder>
-        <zorder>lineEdit_5</zorder>
-        <zorder>label_40</zorder>
-        <zorder>lineEdit_6</zorder>
-        <zorder>groupBox_11</zorder>
-        <zorder>groupBox_11</zorder>
-       </widget>
-      </item>
-      <item>
-       <widget class="QGroupBox" name="groupBox_11">
-        <property name="title">
-         <string>ModeSet</string>
-        </property>
-        <widget class="QRadioButton" name="radioButton">
-         <property name="geometry">
-          <rect>
-           <x>161</x>
-           <y>102</y>
-           <width>75</width>
-           <height>23</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>120cd</string>
-         </property>
-        </widget>
-        <widget class="QRadioButton" name="radioButton_2">
-         <property name="geometry">
-          <rect>
-           <x>161</x>
-           <y>182</y>
-           <width>75</width>
-           <height>23</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>300cd</string>
-         </property>
-        </widget>
-        <widget class="QRadioButton" name="radioButton_3">
-         <property name="geometry">
-          <rect>
-           <x>161</x>
-           <y>222</y>
-           <width>75</width>
-           <height>23</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>500cd</string>
-         </property>
-        </widget>
-        <widget class="QRadioButton" name="radioButton_4">
-         <property name="geometry">
-          <rect>
-           <x>161</x>
-           <y>142</y>
-           <width>75</width>
-           <height>23</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>200cd</string>
-         </property>
-        </widget>
-        <widget class="QRadioButton" name="radioButton_9">
-         <property name="geometry">
-          <rect>
-           <x>161</x>
-           <y>262</y>
-           <width>75</width>
-           <height>23</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>800cd</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_41">
-         <property name="geometry">
-          <rect>
-           <x>11</x>
-           <y>577</y>
-           <width>121</width>
-           <height>18</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>manualModeset</string>
-         </property>
-        </widget>
-        <widget class="Line" name="line_3">
-         <property name="geometry">
-          <rect>
-           <x>11</x>
-           <y>568</y>
-           <width>529</width>
-           <height>16</height>
-          </rect>
-         </property>
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-        </widget>
-        <widget class="QCheckBox" name="checkBox">
-         <property name="geometry">
-          <rect>
-           <x>279</x>
-           <y>577</y>
-           <width>80</width>
-           <height>23</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>enable</string>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="pushButton_4">
-         <property name="geometry">
-          <rect>
-           <x>21</x>
-           <y>311</y>
-           <width>132</width>
-           <height>28</height>
-          </rect>
-         </property>
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="text">
-          <string>manulModeSet</string>
-         </property>
-        </widget>
-        <widget class="QRadioButton" name="radioButton_10">
-         <property name="geometry">
-          <rect>
-           <x>159</x>
-           <y>313</y>
-           <width>80</width>
-           <height>23</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>enable</string>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="pushButton_3">
-         <property name="geometry">
-          <rect>
-           <x>21</x>
-           <y>111</y>
-           <width>129</width>
-           <height>181</height>
-          </rect>
-         </property>
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="text">
-          <string>persetModeSet</string>
-         </property>
-        </widget>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </widget>
-   <widget class="QWidget" name="tab_10">
-    <attribute name="title">
-     <string>Ispdownload</string>
-    </attribute>
-    <widget class="QProgressBar" name="progressBar">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>420</y>
-       <width>861</width>
-       <height>23</height>
-      </rect>
-     </property>
-     <property name="value">
-      <number>24</number>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_39">
-     <property name="geometry">
-      <rect>
-       <x>380</x>
-       <y>380</y>
-       <width>67</width>
-       <height>17</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>TextLabel</string>
-     </property>
-    </widget>
-    <widget class="QWidget" name="">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>40</y>
-       <width>841</width>
-       <height>30</height>
-      </rect>
-     </property>
-     <layout class="QHBoxLayout" name="horizontalLayout_2">
-      <item>
-       <widget class="QLabel" name="label_42">
-        <property name="text">
-         <string>current firmware file</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="lineEdit_4"/>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pb_execvc_2">
-        <property name="font">
-         <font>
-          <pointsize>11</pointsize>
-         </font>
-        </property>
-        <property name="text">
-         <string>Download</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </widget>
   </widget>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
@@ -2840,19 +2890,19 @@
     <string>FX2</string>
    </property>
   </widget>
-  <zorder>label</zorder>
-  <zorder>tab1</zorder>
-  <zorder>label_2</zorder>
-  <zorder>label_seldevice</zorder>
-  <zorder>listWidget</zorder>
-  <zorder>label_8</zorder>
-  <zorder>label_9</zorder>
-  <zorder>label_if</zorder>
-  <zorder>label_aif</zorder>
-  <zorder>pb_reset</zorder>
-  <zorder>label_20</zorder>
-  <zorder>label_devtype</zorder>
-  <zorder>groupBox_11</zorder>
+  <widget class="QPushButton" name="resetToMode">
+   <property name="geometry">
+    <rect>
+     <x>700</x>
+     <y>60</y>
+     <width>171</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Reset To Downmode</string>
+   </property>
+  </widget>
  </widget>
  <tabstops>
   <tabstop>rb3_custom</tabstop>

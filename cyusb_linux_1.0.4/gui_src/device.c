@@ -8,7 +8,6 @@
  * and can serve as a starting point for developing
  * applications using hidraw.
  */
-
 /* Linux */
 #include <stdio.h>
 #include <string.h>
@@ -25,6 +24,7 @@
 #include <linux/hidraw.h>
 #include "hid.h"
 #include "device.h"
+
 
 int open_cx3(int idx)
 {

@@ -27,10 +27,7 @@
 #include "../include/cyusb.h"
 
 extern "C"{
-#include "reset2down.h"
-}
-extern "C"{
-extern int reset2Down();
+int reset_device();
 }
 
 ControlCenter *mainwin = NULL;
@@ -789,19 +786,20 @@ void ControlCenter::on_pb1_start_clicked()
 void ControlCenter::on_pb_reset_clicked()
 {
 	int r;
-
+#if 0
 	if ( current_device_index == -1 ) {
 		QMessageBox mb;
 		mb.setText("No device has been selected yet !\n");
 		mb.exec();
 		return ;
 	}
-    //wangkf add
-    r= reset2Down();
-    //r = cyusb_reset_device(h);
+
+    r = cyusb_reset_device(h);
     QMessageBox mb;
 	mb.setText("Device reset");
 	mb.exec();
+#endif
+    reset_device();
 }
 
 void ControlCenter::on_rb3_ramdl_clicked()

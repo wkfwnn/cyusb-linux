@@ -2,6 +2,7 @@
 
 #include <sys/types.h>
 #include <sys/socket.h>
+#include "ota_thread.h"
 
 #ifndef CONTROLCENTERFORM_H
 #define CONTROLCENTER_H
@@ -76,6 +77,26 @@ private slots:
 	void on_rb7_disable_clicked();
 	void on_pb7_clearhalt_out_clicked();
 	void on_pb7_clearhalt_in_clicked();
+    void on_screenOffButton_clicked();
+    void on_screenOnButton_clicked();
+    void on_cd_120RadioButton_clicked();
+    void on_cd_200RadioButton_clicked();
+    void on_cd_300RadioButton_clicked();
+    void on_cd_500RadioButton_clicked();
+    void on_cd_800RadioButton_clicked();
+    void on_enbaleManRadioButton_clicked();
+    void on_fileNameSelectButton_clicked();
+    void on_setLumLineEdit_textEdited(const QString &arg1);
+    void on_getPushButton_clicked();
+    void on_setPushButton_clicked();
+    void on_horizontalSlider_valueChanged(int value);
+    void on_downloadButton_clicked();
+    void receiveOtaThreadStatus(QString,int);
+
+    void on_resetToMode_clicked();
+
+private:
+      Ota_Thread *mThread;
 };
 
 #endif
