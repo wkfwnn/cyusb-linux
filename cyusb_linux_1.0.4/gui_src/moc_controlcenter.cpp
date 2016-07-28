@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'controlcenter.h'
 **
-** Created: Tue Jul 26 19:23:39 2016
+** Created: Thu Jul 28 19:29:08 2016
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_ControlCenter[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-      54,   14, // methods
+      70,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -85,6 +85,22 @@ static const uint qt_meta_data_ControlCenter[] = {
     1265,   14,   14,   14, 0x08,
     1290,   14,   14,   14, 0x08,
     1321,   14,   14,   14, 0x08,
+    1351,   14,   14,   14, 0x08,
+    1380,   14,   14,   14, 0x08,
+    1408,   14,   14,   14, 0x08,
+    1439,   14,   14,   14, 0x08,
+    1470,   14,   14,   14, 0x08,
+    1501,   14,   14,   14, 0x08,
+    1532,   14,   14,   14, 0x08,
+    1563,   14,   14,   14, 0x08,
+    1597,   14,   14,   14, 0x08,
+    1636, 1631,   14,   14, 0x08,
+    1674,   14,   14,   14, 0x08,
+    1701,   14,   14,   14, 0x08,
+    1734, 1728,   14,   14, 0x08,
+    1772,   14,   14,   14, 0x08,
+    1800,  113,   14,   14, 0x08,
+    1836,   14,   14,   14, 0x08,
 
        0        // eod
 };
@@ -126,6 +142,22 @@ static const char qt_meta_stringdata_ControlCenter[] = {
     "on_rb7_disable_clicked()\0"
     "on_pb7_clearhalt_out_clicked()\0"
     "on_pb7_clearhalt_in_clicked()\0"
+    "on_screenOffButton_clicked()\0"
+    "on_screenOnButton_clicked()\0"
+    "on_cd_120RadioButton_clicked()\0"
+    "on_cd_200RadioButton_clicked()\0"
+    "on_cd_300RadioButton_clicked()\0"
+    "on_cd_500RadioButton_clicked()\0"
+    "on_cd_800RadioButton_clicked()\0"
+    "on_enbaleManRadioButton_clicked()\0"
+    "on_fileNameSelectButton_clicked()\0"
+    "arg1\0on_setLumLineEdit_textEdited(QString)\0"
+    "on_getPushButton_clicked()\0"
+    "on_setPushButton_clicked()\0value\0"
+    "on_horizontalSlider_valueChanged(int)\0"
+    "on_downloadButton_clicked()\0"
+    "receiveOtaThreadStatus(QString,int)\0"
+    "on_resetToMode_clicked()\0"
 };
 
 void ControlCenter::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -188,6 +220,22 @@ void ControlCenter::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         case 51: _t->on_rb7_disable_clicked(); break;
         case 52: _t->on_pb7_clearhalt_out_clicked(); break;
         case 53: _t->on_pb7_clearhalt_in_clicked(); break;
+        case 54: _t->on_screenOffButton_clicked(); break;
+        case 55: _t->on_screenOnButton_clicked(); break;
+        case 56: _t->on_cd_120RadioButton_clicked(); break;
+        case 57: _t->on_cd_200RadioButton_clicked(); break;
+        case 58: _t->on_cd_300RadioButton_clicked(); break;
+        case 59: _t->on_cd_500RadioButton_clicked(); break;
+        case 60: _t->on_cd_800RadioButton_clicked(); break;
+        case 61: _t->on_enbaleManRadioButton_clicked(); break;
+        case 62: _t->on_fileNameSelectButton_clicked(); break;
+        case 63: _t->on_setLumLineEdit_textEdited((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 64: _t->on_getPushButton_clicked(); break;
+        case 65: _t->on_setPushButton_clicked(); break;
+        case 66: _t->on_horizontalSlider_valueChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 67: _t->on_downloadButton_clicked(); break;
+        case 68: _t->receiveOtaThreadStatus((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
+        case 69: _t->on_resetToMode_clicked(); break;
         default: ;
         }
     }
@@ -227,9 +275,9 @@ int ControlCenter::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 54)
+        if (_id < 70)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 54;
+        _id -= 70;
     }
     return _id;
 }

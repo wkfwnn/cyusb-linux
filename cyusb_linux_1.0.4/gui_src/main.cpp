@@ -1979,7 +1979,7 @@ int main(int argc, char **argv)
 	mainwin = new ControlCenter;
 	QMainWindow *mw = new QMainWindow(0);
 	mw->setCentralWidget(mainwin);
-    QIcon *qic = new QIcon("llvison.png");
+    QIcon *qic = new QIcon("llvision.png");
 	app.setWindowIcon(*qic);
 	set_tool_tips();
 	mw->setFixedSize(880, 660);

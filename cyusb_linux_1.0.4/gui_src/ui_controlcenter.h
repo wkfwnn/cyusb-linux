@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'controlcenter.ui'
 **
-** Created: Tue Jul 26 19:23:27 2016
+** Created: Thu Jul 28 19:28:55 2016
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -40,6 +40,78 @@ class Ui_ControlCenter
 public:
     QLabel *label;
     QTabWidget *tab1;
+    QWidget *tab_3;
+    QTabWidget *tab2;
+    QWidget *tab_4;
+    QGroupBox *groupBox_2;
+    QRadioButton *rb1_ram;
+    QRadioButton *rb1_small;
+    QRadioButton *rb1_large;
+    QPushButton *pb1_selfile;
+    QLabel *label_3;
+    QLabel *label1_selfile;
+    QListWidget *lw1_display;
+    QPushButton *pb1_start;
+    QPushButton *pb1_clear;
+    QGroupBox *groupBox_3;
+    QRadioButton *rb_internal;
+    QRadioButton *rb_external;
+    QWidget *tab_5;
+    QListWidget *lw4_display;
+    QPushButton *pb4_selfile;
+    QPushButton *pb4_start;
+    QPushButton *pb4_clear;
+    QGroupBox *groupBox_5;
+    QRadioButton *rb4_ram;
+    QRadioButton *rb4_i2c;
+    QRadioButton *rb4_spi;
+    QLabel *label_39;
+    QLabel *label4_file;
+    QWidget *tab_10;
+    QProgressBar *progressBar;
+    QLabel *statusLabel;
+    QLabel *label_43;
+    QWidget *layoutWidget;
+    QHBoxLayout *horizontalLayout_2;
+    QLabel *label_42;
+    QPushButton *fileNameSelectButton;
+    QPushButton *downloadButton;
+    QWidget *tab_9;
+    QWidget *layoutWidget1;
+    QHBoxLayout *horizontalLayout;
+    QGroupBox *groupBox_9;
+    QWidget *layoutWidget2;
+    QVBoxLayout *verticalLayout;
+    QPushButton *screenOffButton;
+    QPushButton *screenOnButton;
+    QGroupBox *groupBox_10;
+    QWidget *layoutWidget3;
+    QGridLayout *gridLayout;
+    QLabel *label_33;
+    QLineEdit *curLumLineEdit;
+    QLabel *label_34;
+    QLineEdit *minLumLineEdit;
+    QLabel *label_38;
+    QLineEdit *maxLumLineEdit;
+    QLabel *label_40;
+    QLineEdit *setLumLineEdit;
+    QSlider *horizontalSlider;
+    QWidget *layoutWidget4;
+    QHBoxLayout *horizontalLayout_3;
+    QPushButton *getPushButton;
+    QPushButton *setPushButton;
+    QGroupBox *groupBox_11;
+    QRadioButton *cd_120RadioButton;
+    QRadioButton *cd_300RadioButton;
+    QRadioButton *cd_500RadioButton;
+    QRadioButton *cd_200RadioButton;
+    QRadioButton *cd_800RadioButton;
+    QLabel *label_41;
+    QFrame *line_3;
+    QCheckBox *checkBox;
+    QPushButton *pushButton_4;
+    QRadioButton *enbaleManRadioButton;
+    QPushButton *pushButton_3;
     QWidget *tab;
     QListWidget *lw_desc;
     QPushButton *pb_clear;
@@ -59,33 +131,6 @@ public:
     QPushButton *pb_setAltIf;
     QListWidget *lw_summ;
     QLabel *label_21;
-    QWidget *tab_3;
-    QTabWidget *tab2;
-    QWidget *tab_4;
-    QGroupBox *groupBox_2;
-    QRadioButton *rb1_ram;
-    QRadioButton *rb1_small;
-    QRadioButton *rb1_large;
-    QPushButton *pb1_selfile;
-    QLabel *label_3;
-    QLabel *label1_selfile;
-    QListWidget *lw1_display;
-    QPushButton *pb1_start;
-    QPushButton *pb1_clear;
-    QGroupBox *groupBox_3;
-    QRadioButton *rb_internal;
-    QRadioButton *rb_external;
-    QWidget *tab_5;
-    QListWidget *lw4_display;
-    QLabel *label4_file;
-    QPushButton *pb4_selfile;
-    QPushButton *pb4_start;
-    QPushButton *pb4_clear;
-    QLabel *label_23;
-    QGroupBox *groupBox_5;
-    QRadioButton *rb4_ram;
-    QRadioButton *rb4_i2c;
-    QRadioButton *rb4_spi;
     QWidget *tab_6;
     QGroupBox *groupBox_4;
     QRadioButton *rb3_ramdl;
@@ -201,46 +246,6 @@ public:
     QRadioButton *rb7_disable;
     QPushButton *pb7_clearhalt_in;
     QPushButton *pb7_clearhalt_out;
-    QWidget *tab_9;
-    QWidget *widget;
-    QHBoxLayout *horizontalLayout;
-    QGroupBox *groupBox_9;
-    QWidget *widget1;
-    QVBoxLayout *verticalLayout;
-    QPushButton *pushButton;
-    QPushButton *pushButton_2;
-    QGroupBox *groupBox_10;
-    QWidget *widget2;
-    QGridLayout *gridLayout;
-    QLabel *label_33;
-    QLineEdit *lineEdit;
-    QLabel *label_34;
-    QLineEdit *lineEdit_2;
-    QLabel *label_38;
-    QLineEdit *lineEdit_3;
-    QLabel *label_40;
-    QLineEdit *lineEdit_6;
-    QSlider *horizontalSlider;
-    QGroupBox *groupBox_11;
-    QRadioButton *radioButton;
-    QRadioButton *radioButton_2;
-    QRadioButton *radioButton_3;
-    QRadioButton *radioButton_4;
-    QRadioButton *radioButton_9;
-    QLabel *label_41;
-    QFrame *line_3;
-    QCheckBox *checkBox;
-    QPushButton *pushButton_4;
-    QRadioButton *radioButton_10;
-    QPushButton *pushButton_3;
-    QWidget *tab_10;
-    QProgressBar *progressBar;
-    QLabel *label_39;
-    QWidget *widget3;
-    QHBoxLayout *horizontalLayout_2;
-    QLabel *label_42;
-    QLineEdit *lineEdit_4;
-    QPushButton *pb_execvc_2;
     QLabel *label_2;
     QLabel *label_seldevice;
     QListWidget *listWidget;
@@ -251,6 +256,7 @@ public:
     QPushButton *pb_reset;
     QLabel *label_20;
     QLabel *label_devtype;
+    QPushButton *resetToMode;
 
     void setupUi(QWidget *ControlCenter)
     {
@@ -277,15 +283,302 @@ public:
         label->setGeometry(QRect(0, 40, 121, 16));
         tab1 = new QTabWidget(ControlCenter);
         tab1->setObjectName(QString::fromUtf8("tab1"));
-        tab1->setGeometry(QRect(0, 160, 871, 476));
+        tab1->setEnabled(true);
+        tab1->setGeometry(QRect(-10, 170, 871, 476));
         tab1->setTabShape(QTabWidget::Rounded);
+        tab_3 = new QWidget();
+        tab_3->setObjectName(QString::fromUtf8("tab_3"));
+        tab2 = new QTabWidget(tab_3);
+        tab2->setObjectName(QString::fromUtf8("tab2"));
+        tab2->setGeometry(QRect(0, 10, 851, 351));
+        tab_4 = new QWidget();
+        tab_4->setObjectName(QString::fromUtf8("tab_4"));
+        groupBox_2 = new QGroupBox(tab_4);
+        groupBox_2->setObjectName(QString::fromUtf8("groupBox_2"));
+        groupBox_2->setGeometry(QRect(10, 10, 191, 101));
+        rb1_ram = new QRadioButton(groupBox_2);
+        rb1_ram->setObjectName(QString::fromUtf8("rb1_ram"));
+        rb1_ram->setGeometry(QRect(11, 21, 177, 19));
+        rb1_small = new QRadioButton(groupBox_2);
+        rb1_small->setObjectName(QString::fromUtf8("rb1_small"));
+        rb1_small->setGeometry(QRect(11, 46, 177, 19));
+        rb1_large = new QRadioButton(groupBox_2);
+        rb1_large->setObjectName(QString::fromUtf8("rb1_large"));
+        rb1_large->setGeometry(QRect(11, 71, 177, 19));
+        pb1_selfile = new QPushButton(tab_4);
+        pb1_selfile->setObjectName(QString::fromUtf8("pb1_selfile"));
+        pb1_selfile->setGeometry(QRect(100, 200, 111, 27));
+        label_3 = new QLabel(tab_4);
+        label_3->setObjectName(QString::fromUtf8("label_3"));
+        label_3->setGeometry(QRect(220, 10, 91, 16));
+        label1_selfile = new QLabel(tab_4);
+        label1_selfile->setObjectName(QString::fromUtf8("label1_selfile"));
+        label1_selfile->setGeometry(QRect(320, 0, 511, 31));
+        label1_selfile->setFrameShape(QFrame::Box);
+        lw1_display = new QListWidget(tab_4);
+        lw1_display->setObjectName(QString::fromUtf8("lw1_display"));
+        lw1_display->setGeometry(QRect(220, 40, 611, 251));
+        QFont font1;
+        font1.setFamily(QString::fromUtf8("DejaVu Sans Mono"));
+        lw1_display->setFont(font1);
+        pb1_start = new QPushButton(tab_4);
+        pb1_start->setObjectName(QString::fromUtf8("pb1_start"));
+        pb1_start->setGeometry(QRect(100, 230, 111, 27));
+        pb1_clear = new QPushButton(tab_4);
+        pb1_clear->setObjectName(QString::fromUtf8("pb1_clear"));
+        pb1_clear->setGeometry(QRect(170, 260, 41, 27));
+        groupBox_3 = new QGroupBox(tab_4);
+        groupBox_3->setObjectName(QString::fromUtf8("groupBox_3"));
+        groupBox_3->setGeometry(QRect(10, 120, 91, 71));
+        rb_internal = new QRadioButton(groupBox_3);
+        rb_internal->setObjectName(QString::fromUtf8("rb_internal"));
+        rb_internal->setGeometry(QRect(0, 20, 106, 20));
+        rb_external = new QRadioButton(groupBox_3);
+        rb_external->setObjectName(QString::fromUtf8("rb_external"));
+        rb_external->setGeometry(QRect(0, 40, 106, 20));
+        tab2->addTab(tab_4, QString());
+        tab_5 = new QWidget();
+        tab_5->setObjectName(QString::fromUtf8("tab_5"));
+        lw4_display = new QListWidget(tab_5);
+        lw4_display->setObjectName(QString::fromUtf8("lw4_display"));
+        lw4_display->setGeometry(QRect(220, 90, 611, 201));
+        lw4_display->setFont(font1);
+        pb4_selfile = new QPushButton(tab_5);
+        pb4_selfile->setObjectName(QString::fromUtf8("pb4_selfile"));
+        pb4_selfile->setGeometry(QRect(90, 190, 121, 27));
+        pb4_start = new QPushButton(tab_5);
+        pb4_start->setObjectName(QString::fromUtf8("pb4_start"));
+        pb4_start->setGeometry(QRect(90, 230, 121, 27));
+        pb4_clear = new QPushButton(tab_5);
+        pb4_clear->setObjectName(QString::fromUtf8("pb4_clear"));
+        pb4_clear->setGeometry(QRect(170, 260, 41, 27));
+        groupBox_5 = new QGroupBox(tab_5);
+        groupBox_5->setObjectName(QString::fromUtf8("groupBox_5"));
+        groupBox_5->setGeometry(QRect(10, 10, 191, 101));
+        rb4_ram = new QRadioButton(groupBox_5);
+        rb4_ram->setObjectName(QString::fromUtf8("rb4_ram"));
+        rb4_ram->setGeometry(QRect(11, 21, 177, 19));
+        rb4_i2c = new QRadioButton(groupBox_5);
+        rb4_i2c->setObjectName(QString::fromUtf8("rb4_i2c"));
+        rb4_i2c->setGeometry(QRect(11, 46, 177, 19));
+        rb4_spi = new QRadioButton(groupBox_5);
+        rb4_spi->setObjectName(QString::fromUtf8("rb4_spi"));
+        rb4_spi->setGeometry(QRect(11, 71, 177, 19));
+        label_39 = new QLabel(tab_5);
+        label_39->setObjectName(QString::fromUtf8("label_39"));
+        label_39->setGeometry(QRect(200, 30, 121, 20));
+        label4_file = new QLabel(tab_5);
+        label4_file->setObjectName(QString::fromUtf8("label4_file"));
+        label4_file->setGeometry(QRect(330, 20, 511, 31));
+        label4_file->setFrameShape(QFrame::Box);
+        tab2->addTab(tab_5, QString());
+        tab1->addTab(tab_3, QString());
+        tab_10 = new QWidget();
+        tab_10->setObjectName(QString::fromUtf8("tab_10"));
+        progressBar = new QProgressBar(tab_10);
+        progressBar->setObjectName(QString::fromUtf8("progressBar"));
+        progressBar->setGeometry(QRect(0, 420, 861, 23));
+        progressBar->setValue(24);
+        statusLabel = new QLabel(tab_10);
+        statusLabel->setObjectName(QString::fromUtf8("statusLabel"));
+        statusLabel->setGeometry(QRect(250, 380, 351, 20));
+        label_43 = new QLabel(tab_10);
+        label_43->setObjectName(QString::fromUtf8("label_43"));
+        label_43->setGeometry(QRect(434, 41, 205, 28));
+        layoutWidget = new QWidget(tab_10);
+        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
+        layoutWidget->setGeometry(QRect(11, 41, 761, 30));
+        horizontalLayout_2 = new QHBoxLayout(layoutWidget);
+        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
+        horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
+        label_42 = new QLabel(layoutWidget);
+        label_42->setObjectName(QString::fromUtf8("label_42"));
+
+        horizontalLayout_2->addWidget(label_42);
+
+        fileNameSelectButton = new QPushButton(layoutWidget);
+        fileNameSelectButton->setObjectName(QString::fromUtf8("fileNameSelectButton"));
+        QSizePolicy sizePolicy1(QSizePolicy::Expanding, QSizePolicy::Fixed);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(fileNameSelectButton->sizePolicy().hasHeightForWidth());
+        fileNameSelectButton->setSizePolicy(sizePolicy1);
+
+        horizontalLayout_2->addWidget(fileNameSelectButton);
+
+        downloadButton = new QPushButton(layoutWidget);
+        downloadButton->setObjectName(QString::fromUtf8("downloadButton"));
+        QFont font2;
+        font2.setPointSize(11);
+        downloadButton->setFont(font2);
+
+        horizontalLayout_2->addWidget(downloadButton);
+
+        tab1->addTab(tab_10, QString());
+        tab_9 = new QWidget();
+        tab_9->setObjectName(QString::fromUtf8("tab_9"));
+        layoutWidget1 = new QWidget(tab_9);
+        layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
+        layoutWidget1->setGeometry(QRect(0, 10, 861, 431));
+        horizontalLayout = new QHBoxLayout(layoutWidget1);
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        horizontalLayout->setContentsMargins(0, 0, 0, 0);
+        groupBox_9 = new QGroupBox(layoutWidget1);
+        groupBox_9->setObjectName(QString::fromUtf8("groupBox_9"));
+        layoutWidget2 = new QWidget(groupBox_9);
+        layoutWidget2->setObjectName(QString::fromUtf8("layoutWidget2"));
+        layoutWidget2->setGeometry(QRect(40, 90, 181, 261));
+        verticalLayout = new QVBoxLayout(layoutWidget2);
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        verticalLayout->setContentsMargins(0, 0, 0, 0);
+        screenOffButton = new QPushButton(layoutWidget2);
+        screenOffButton->setObjectName(QString::fromUtf8("screenOffButton"));
+        QSizePolicy sizePolicy2(QSizePolicy::Minimum, QSizePolicy::Preferred);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(screenOffButton->sizePolicy().hasHeightForWidth());
+        screenOffButton->setSizePolicy(sizePolicy2);
+
+        verticalLayout->addWidget(screenOffButton);
+
+        screenOnButton = new QPushButton(layoutWidget2);
+        screenOnButton->setObjectName(QString::fromUtf8("screenOnButton"));
+        sizePolicy2.setHeightForWidth(screenOnButton->sizePolicy().hasHeightForWidth());
+        screenOnButton->setSizePolicy(sizePolicy2);
+
+        verticalLayout->addWidget(screenOnButton);
+
+
+        horizontalLayout->addWidget(groupBox_9);
+
+        groupBox_10 = new QGroupBox(layoutWidget1);
+        groupBox_10->setObjectName(QString::fromUtf8("groupBox_10"));
+        layoutWidget3 = new QWidget(groupBox_10);
+        layoutWidget3->setObjectName(QString::fromUtf8("layoutWidget3"));
+        layoutWidget3->setGeometry(QRect(0, 90, 271, 221));
+        gridLayout = new QGridLayout(layoutWidget3);
+        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
+        gridLayout->setContentsMargins(0, 0, 0, 0);
+        label_33 = new QLabel(layoutWidget3);
+        label_33->setObjectName(QString::fromUtf8("label_33"));
+
+        gridLayout->addWidget(label_33, 0, 0, 1, 1);
+
+        curLumLineEdit = new QLineEdit(layoutWidget3);
+        curLumLineEdit->setObjectName(QString::fromUtf8("curLumLineEdit"));
+        curLumLineEdit->setReadOnly(true);
+
+        gridLayout->addWidget(curLumLineEdit, 0, 1, 1, 1);
+
+        label_34 = new QLabel(layoutWidget3);
+        label_34->setObjectName(QString::fromUtf8("label_34"));
+
+        gridLayout->addWidget(label_34, 1, 0, 1, 1);
+
+        minLumLineEdit = new QLineEdit(layoutWidget3);
+        minLumLineEdit->setObjectName(QString::fromUtf8("minLumLineEdit"));
+        minLumLineEdit->setReadOnly(true);
+
+        gridLayout->addWidget(minLumLineEdit, 1, 1, 1, 1);
+
+        label_38 = new QLabel(layoutWidget3);
+        label_38->setObjectName(QString::fromUtf8("label_38"));
+
+        gridLayout->addWidget(label_38, 2, 0, 1, 1);
+
+        maxLumLineEdit = new QLineEdit(layoutWidget3);
+        maxLumLineEdit->setObjectName(QString::fromUtf8("maxLumLineEdit"));
+        maxLumLineEdit->setReadOnly(true);
+
+        gridLayout->addWidget(maxLumLineEdit, 2, 1, 1, 1);
+
+        label_40 = new QLabel(layoutWidget3);
+        label_40->setObjectName(QString::fromUtf8("label_40"));
+
+        gridLayout->addWidget(label_40, 3, 0, 1, 1);
+
+        setLumLineEdit = new QLineEdit(layoutWidget3);
+        setLumLineEdit->setObjectName(QString::fromUtf8("setLumLineEdit"));
+
+        gridLayout->addWidget(setLumLineEdit, 3, 1, 1, 1);
+
+        horizontalSlider = new QSlider(layoutWidget3);
+        horizontalSlider->setObjectName(QString::fromUtf8("horizontalSlider"));
+        horizontalSlider->setMinimum(1);
+        horizontalSlider->setMaximum(255);
+        horizontalSlider->setOrientation(Qt::Horizontal);
+
+        gridLayout->addWidget(horizontalSlider, 4, 0, 1, 2);
+
+        layoutWidget4 = new QWidget(groupBox_10);
+        layoutWidget4->setObjectName(QString::fromUtf8("layoutWidget4"));
+        layoutWidget4->setGeometry(QRect(0, 320, 271, 30));
+        horizontalLayout_3 = new QHBoxLayout(layoutWidget4);
+        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
+        horizontalLayout_3->setContentsMargins(0, 0, 0, 0);
+        getPushButton = new QPushButton(layoutWidget4);
+        getPushButton->setObjectName(QString::fromUtf8("getPushButton"));
+
+        horizontalLayout_3->addWidget(getPushButton);
+
+        setPushButton = new QPushButton(layoutWidget4);
+        setPushButton->setObjectName(QString::fromUtf8("setPushButton"));
+
+        horizontalLayout_3->addWidget(setPushButton);
+
+
+        horizontalLayout->addWidget(groupBox_10);
+
+        groupBox_11 = new QGroupBox(layoutWidget1);
+        groupBox_11->setObjectName(QString::fromUtf8("groupBox_11"));
+        cd_120RadioButton = new QRadioButton(groupBox_11);
+        cd_120RadioButton->setObjectName(QString::fromUtf8("cd_120RadioButton"));
+        cd_120RadioButton->setGeometry(QRect(161, 102, 75, 23));
+        cd_300RadioButton = new QRadioButton(groupBox_11);
+        cd_300RadioButton->setObjectName(QString::fromUtf8("cd_300RadioButton"));
+        cd_300RadioButton->setGeometry(QRect(161, 182, 75, 23));
+        cd_500RadioButton = new QRadioButton(groupBox_11);
+        cd_500RadioButton->setObjectName(QString::fromUtf8("cd_500RadioButton"));
+        cd_500RadioButton->setGeometry(QRect(161, 222, 75, 23));
+        cd_200RadioButton = new QRadioButton(groupBox_11);
+        cd_200RadioButton->setObjectName(QString::fromUtf8("cd_200RadioButton"));
+        cd_200RadioButton->setGeometry(QRect(161, 142, 75, 23));
+        cd_800RadioButton = new QRadioButton(groupBox_11);
+        cd_800RadioButton->setObjectName(QString::fromUtf8("cd_800RadioButton"));
+        cd_800RadioButton->setGeometry(QRect(161, 262, 75, 23));
+        label_41 = new QLabel(groupBox_11);
+        label_41->setObjectName(QString::fromUtf8("label_41"));
+        label_41->setGeometry(QRect(11, 577, 121, 18));
+        line_3 = new QFrame(groupBox_11);
+        line_3->setObjectName(QString::fromUtf8("line_3"));
+        line_3->setGeometry(QRect(11, 568, 529, 16));
+        line_3->setFrameShape(QFrame::HLine);
+        line_3->setFrameShadow(QFrame::Sunken);
+        checkBox = new QCheckBox(groupBox_11);
+        checkBox->setObjectName(QString::fromUtf8("checkBox"));
+        checkBox->setGeometry(QRect(279, 577, 80, 23));
+        pushButton_4 = new QPushButton(groupBox_11);
+        pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
+        pushButton_4->setGeometry(QRect(21, 311, 132, 28));
+        sizePolicy2.setHeightForWidth(pushButton_4->sizePolicy().hasHeightForWidth());
+        pushButton_4->setSizePolicy(sizePolicy2);
+        enbaleManRadioButton = new QRadioButton(groupBox_11);
+        enbaleManRadioButton->setObjectName(QString::fromUtf8("enbaleManRadioButton"));
+        enbaleManRadioButton->setGeometry(QRect(159, 313, 80, 23));
+        pushButton_3 = new QPushButton(groupBox_11);
+        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
+        pushButton_3->setGeometry(QRect(21, 111, 129, 181));
+        sizePolicy2.setHeightForWidth(pushButton_3->sizePolicy().hasHeightForWidth());
+        pushButton_3->setSizePolicy(sizePolicy2);
+
+        horizontalLayout->addWidget(groupBox_11);
+
+        tab1->addTab(tab_9, QString());
         tab = new QWidget();
         tab->setObjectName(QString::fromUtf8("tab"));
         lw_desc = new QListWidget(tab);
         lw_desc->setObjectName(QString::fromUtf8("lw_desc"));
         lw_desc->setGeometry(QRect(420, 10, 441, 421));
-        QFont font1;
-        font1.setFamily(QString::fromUtf8("DejaVu Sans Mono"));
         lw_desc->setFont(font1);
         pb_clear = new QPushButton(tab);
         pb_clear->setObjectName(QString::fromUtf8("pb_clear"));
@@ -349,91 +642,6 @@ public:
         label_21->setGeometry(QRect(10, 160, 391, 21));
         label_21->setFont(font1);
         tab1->addTab(tab, QString());
-        tab_3 = new QWidget();
-        tab_3->setObjectName(QString::fromUtf8("tab_3"));
-        tab2 = new QTabWidget(tab_3);
-        tab2->setObjectName(QString::fromUtf8("tab2"));
-        tab2->setGeometry(QRect(0, 10, 841, 331));
-        tab_4 = new QWidget();
-        tab_4->setObjectName(QString::fromUtf8("tab_4"));
-        groupBox_2 = new QGroupBox(tab_4);
-        groupBox_2->setObjectName(QString::fromUtf8("groupBox_2"));
-        groupBox_2->setGeometry(QRect(10, 10, 191, 101));
-        rb1_ram = new QRadioButton(groupBox_2);
-        rb1_ram->setObjectName(QString::fromUtf8("rb1_ram"));
-        rb1_ram->setGeometry(QRect(11, 21, 177, 19));
-        rb1_small = new QRadioButton(groupBox_2);
-        rb1_small->setObjectName(QString::fromUtf8("rb1_small"));
-        rb1_small->setGeometry(QRect(11, 46, 177, 19));
-        rb1_large = new QRadioButton(groupBox_2);
-        rb1_large->setObjectName(QString::fromUtf8("rb1_large"));
-        rb1_large->setGeometry(QRect(11, 71, 177, 19));
-        pb1_selfile = new QPushButton(tab_4);
-        pb1_selfile->setObjectName(QString::fromUtf8("pb1_selfile"));
-        pb1_selfile->setGeometry(QRect(100, 200, 111, 27));
-        label_3 = new QLabel(tab_4);
-        label_3->setObjectName(QString::fromUtf8("label_3"));
-        label_3->setGeometry(QRect(220, 10, 91, 16));
-        label1_selfile = new QLabel(tab_4);
-        label1_selfile->setObjectName(QString::fromUtf8("label1_selfile"));
-        label1_selfile->setGeometry(QRect(320, 0, 511, 31));
-        label1_selfile->setFrameShape(QFrame::Box);
-        lw1_display = new QListWidget(tab_4);
-        lw1_display->setObjectName(QString::fromUtf8("lw1_display"));
-        lw1_display->setGeometry(QRect(220, 40, 611, 251));
-        lw1_display->setFont(font1);
-        pb1_start = new QPushButton(tab_4);
-        pb1_start->setObjectName(QString::fromUtf8("pb1_start"));
-        pb1_start->setGeometry(QRect(100, 230, 111, 27));
-        pb1_clear = new QPushButton(tab_4);
-        pb1_clear->setObjectName(QString::fromUtf8("pb1_clear"));
-        pb1_clear->setGeometry(QRect(170, 260, 41, 27));
-        groupBox_3 = new QGroupBox(tab_4);
-        groupBox_3->setObjectName(QString::fromUtf8("groupBox_3"));
-        groupBox_3->setGeometry(QRect(10, 120, 91, 71));
-        rb_internal = new QRadioButton(groupBox_3);
-        rb_internal->setObjectName(QString::fromUtf8("rb_internal"));
-        rb_internal->setGeometry(QRect(0, 20, 106, 20));
-        rb_external = new QRadioButton(groupBox_3);
-        rb_external->setObjectName(QString::fromUtf8("rb_external"));
-        rb_external->setGeometry(QRect(0, 40, 106, 20));
-        tab2->addTab(tab_4, QString());
-        tab_5 = new QWidget();
-        tab_5->setObjectName(QString::fromUtf8("tab_5"));
-        lw4_display = new QListWidget(tab_5);
-        lw4_display->setObjectName(QString::fromUtf8("lw4_display"));
-        lw4_display->setGeometry(QRect(220, 40, 611, 251));
-        lw4_display->setFont(font1);
-        label4_file = new QLabel(tab_5);
-        label4_file->setObjectName(QString::fromUtf8("label4_file"));
-        label4_file->setGeometry(QRect(320, 0, 511, 31));
-        label4_file->setFrameShape(QFrame::Box);
-        pb4_selfile = new QPushButton(tab_5);
-        pb4_selfile->setObjectName(QString::fromUtf8("pb4_selfile"));
-        pb4_selfile->setGeometry(QRect(100, 200, 111, 27));
-        pb4_start = new QPushButton(tab_5);
-        pb4_start->setObjectName(QString::fromUtf8("pb4_start"));
-        pb4_start->setGeometry(QRect(100, 230, 111, 27));
-        pb4_clear = new QPushButton(tab_5);
-        pb4_clear->setObjectName(QString::fromUtf8("pb4_clear"));
-        pb4_clear->setGeometry(QRect(170, 260, 41, 27));
-        label_23 = new QLabel(tab_5);
-        label_23->setObjectName(QString::fromUtf8("label_23"));
-        label_23->setGeometry(QRect(220, 10, 91, 16));
-        groupBox_5 = new QGroupBox(tab_5);
-        groupBox_5->setObjectName(QString::fromUtf8("groupBox_5"));
-        groupBox_5->setGeometry(QRect(10, 10, 191, 101));
-        rb4_ram = new QRadioButton(groupBox_5);
-        rb4_ram->setObjectName(QString::fromUtf8("rb4_ram"));
-        rb4_ram->setGeometry(QRect(11, 21, 177, 19));
-        rb4_i2c = new QRadioButton(groupBox_5);
-        rb4_i2c->setObjectName(QString::fromUtf8("rb4_i2c"));
-        rb4_i2c->setGeometry(QRect(11, 46, 177, 19));
-        rb4_spi = new QRadioButton(groupBox_5);
-        rb4_spi->setObjectName(QString::fromUtf8("rb4_spi"));
-        rb4_spi->setGeometry(QRect(11, 71, 177, 19));
-        tab2->addTab(tab_5, QString());
-        tab1->addTab(tab_3, QString());
         tab_6 = new QWidget();
         tab_6->setObjectName(QString::fromUtf8("tab_6"));
         groupBox_4 = new QGroupBox(tab_6);
@@ -466,9 +674,9 @@ public:
         label_11 = new QLabel(tab_6);
         label_11->setObjectName(QString::fromUtf8("label_11"));
         label_11->setGeometry(QRect(190, 30, 91, 16));
-        QFont font2;
-        font2.setPointSize(9);
-        label_11->setFont(font2);
+        QFont font3;
+        font3.setPointSize(9);
+        label_11->setFont(font3);
         label_12 = new QLabel(tab_6);
         label_12->setObjectName(QString::fromUtf8("label_12"));
         label_12->setGeometry(QRect(387, 31, 68, 16));
@@ -506,25 +714,25 @@ public:
         label_15 = new QLabel(tab_6);
         label_15->setObjectName(QString::fromUtf8("label_15"));
         label_15->setGeometry(QRect(290, 10, 81, 16));
-        QFont font3;
-        font3.setPointSize(8);
-        label_15->setFont(font3);
+        QFont font4;
+        font4.setPointSize(8);
+        label_15->setFont(font4);
         label_16 = new QLabel(tab_6);
         label_16->setObjectName(QString::fromUtf8("label_16"));
         label_16->setGeometry(QRect(190, 10, 81, 16));
-        label_16->setFont(font3);
+        label_16->setFont(font4);
         label_17 = new QLabel(tab_6);
         label_17->setObjectName(QString::fromUtf8("label_17"));
         label_17->setGeometry(QRect(380, 10, 91, 16));
-        label_17->setFont(font3);
+        label_17->setFont(font4);
         label_18 = new QLabel(tab_6);
         label_18->setObjectName(QString::fromUtf8("label_18"));
         label_18->setGeometry(QRect(470, 10, 91, 16));
-        label_18->setFont(font3);
+        label_18->setFont(font4);
         label_19 = new QLabel(tab_6);
         label_19->setObjectName(QString::fromUtf8("label_19"));
         label_19->setGeometry(QRect(570, 10, 91, 16));
-        label_19->setFont(font3);
+        label_19->setFont(font4);
         le3_out_hex = new QLineEdit(tab_6);
         le3_out_hex->setObjectName(QString::fromUtf8("le3_out_hex"));
         le3_out_hex->setGeometry(QRect(350, 170, 431, 25));
@@ -532,9 +740,7 @@ public:
         pb_execvc = new QPushButton(tab_6);
         pb_execvc->setObjectName(QString::fromUtf8("pb_execvc"));
         pb_execvc->setGeometry(QRect(700, 50, 141, 41));
-        QFont font4;
-        font4.setPointSize(11);
-        pb_execvc->setFont(font4);
+        pb_execvc->setFont(font2);
         pb3_selfile = new QPushButton(tab_6);
         pb3_selfile->setObjectName(QString::fromUtf8("pb3_selfile"));
         pb3_selfile->setGeometry(QRect(290, 110, 51, 27));
@@ -652,7 +858,7 @@ public:
         label_24 = new QLabel(tab_7);
         label_24->setObjectName(QString::fromUtf8("label_24"));
         label_24->setGeometry(QRect(20, 210, 91, 16));
-        label_24->setFont(font3);
+        label_24->setFont(font4);
         le6_out_ascii = new QLineEdit(tab_7);
         le6_out_ascii->setObjectName(QString::fromUtf8("le6_out_ascii"));
         le6_out_ascii->setGeometry(QRect(180, 170, 431, 25));
@@ -688,15 +894,15 @@ public:
         label_75 = new QLabel(tab_7);
         label_75->setObjectName(QString::fromUtf8("label_75"));
         label_75->setGeometry(QRect(750, 210, 41, 16));
-        label_75->setFont(font3);
+        label_75->setFont(font4);
         pb6_clearhalt_out = new QPushButton(tab_7);
         pb6_clearhalt_out->setObjectName(QString::fromUtf8("pb6_clearhalt_out"));
         pb6_clearhalt_out->setGeometry(QRect(50, 60, 61, 21));
-        pb6_clearhalt_out->setFont(font3);
+        pb6_clearhalt_out->setFont(font4);
         pb6_clearhalt_in = new QPushButton(tab_7);
         pb6_clearhalt_in->setObjectName(QString::fromUtf8("pb6_clearhalt_in"));
         pb6_clearhalt_in->setGeometry(QRect(240, 60, 61, 21));
-        pb6_clearhalt_in->setFont(font3);
+        pb6_clearhalt_in->setFont(font4);
         tabWidget->addTab(tab_7, QString());
         tab_8 = new QWidget();
         tab_8->setObjectName(QString::fromUtf8("tab_8"));
@@ -770,7 +976,7 @@ public:
         label_70 = new QLabel(groupBox_16);
         label_70->setObjectName(QString::fromUtf8("label_70"));
         label_70->setGeometry(QRect(15, 35, 81, 20));
-        label_70->setFont(font2);
+        label_70->setFont(font3);
         line_2 = new QFrame(groupBox_16);
         line_2->setObjectName(QString::fromUtf8("line_2"));
         line_2->setGeometry(QRect(15, 55, 281, 16));
@@ -821,11 +1027,11 @@ public:
         label_66 = new QLabel(tab_8);
         label_66->setObjectName(QString::fromUtf8("label_66"));
         label_66->setGeometry(QRect(20, 210, 101, 16));
-        label_66->setFont(font3);
+        label_66->setFont(font4);
         label_76 = new QLabel(tab_8);
         label_76->setObjectName(QString::fromUtf8("label_76"));
         label_76->setGeometry(QRect(440, 210, 91, 16));
-        label_76->setFont(font3);
+        label_76->setFont(font4);
         label_77 = new QLabel(tab_8);
         label_77->setObjectName(QString::fromUtf8("label_77"));
         label_77->setGeometry(QRect(280, 30, 71, 16));
@@ -845,194 +1051,13 @@ public:
         pb7_clearhalt_in = new QPushButton(tab_8);
         pb7_clearhalt_in->setObjectName(QString::fromUtf8("pb7_clearhalt_in"));
         pb7_clearhalt_in->setGeometry(QRect(155, 80, 61, 21));
-        pb7_clearhalt_in->setFont(font3);
+        pb7_clearhalt_in->setFont(font4);
         pb7_clearhalt_out = new QPushButton(tab_8);
         pb7_clearhalt_out->setObjectName(QString::fromUtf8("pb7_clearhalt_out"));
         pb7_clearhalt_out->setGeometry(QRect(60, 80, 61, 21));
-        pb7_clearhalt_out->setFont(font3);
+        pb7_clearhalt_out->setFont(font4);
         tabWidget->addTab(tab_8, QString());
         tab1->addTab(tab_2, QString());
-        tab_9 = new QWidget();
-        tab_9->setObjectName(QString::fromUtf8("tab_9"));
-        widget = new QWidget(tab_9);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(0, 10, 861, 431));
-        horizontalLayout = new QHBoxLayout(widget);
-        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        groupBox_9 = new QGroupBox(widget);
-        groupBox_9->setObjectName(QString::fromUtf8("groupBox_9"));
-        widget1 = new QWidget(groupBox_9);
-        widget1->setObjectName(QString::fromUtf8("widget1"));
-        widget1->setGeometry(QRect(40, 90, 181, 261));
-        verticalLayout = new QVBoxLayout(widget1);
-        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        verticalLayout->setContentsMargins(0, 0, 0, 0);
-        pushButton = new QPushButton(widget1);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        QSizePolicy sizePolicy1(QSizePolicy::Minimum, QSizePolicy::Preferred);
-        sizePolicy1.setHorizontalStretch(0);
-        sizePolicy1.setVerticalStretch(0);
-        sizePolicy1.setHeightForWidth(pushButton->sizePolicy().hasHeightForWidth());
-        pushButton->setSizePolicy(sizePolicy1);
-
-        verticalLayout->addWidget(pushButton);
-
-        pushButton_2 = new QPushButton(widget1);
-        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-        sizePolicy1.setHeightForWidth(pushButton_2->sizePolicy().hasHeightForWidth());
-        pushButton_2->setSizePolicy(sizePolicy1);
-
-        verticalLayout->addWidget(pushButton_2);
-
-        pushButton->raise();
-        pushButton_2->raise();
-
-        horizontalLayout->addWidget(groupBox_9);
-
-        groupBox_10 = new QGroupBox(widget);
-        groupBox_10->setObjectName(QString::fromUtf8("groupBox_10"));
-        widget2 = new QWidget(groupBox_10);
-        widget2->setObjectName(QString::fromUtf8("widget2"));
-        widget2->setGeometry(QRect(20, 92, 251, 261));
-        gridLayout = new QGridLayout(widget2);
-        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
-        gridLayout->setContentsMargins(0, 0, 0, 0);
-        label_33 = new QLabel(widget2);
-        label_33->setObjectName(QString::fromUtf8("label_33"));
-
-        gridLayout->addWidget(label_33, 0, 0, 1, 1);
-
-        lineEdit = new QLineEdit(widget2);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
-
-        gridLayout->addWidget(lineEdit, 0, 1, 1, 1);
-
-        label_34 = new QLabel(widget2);
-        label_34->setObjectName(QString::fromUtf8("label_34"));
-
-        gridLayout->addWidget(label_34, 1, 0, 1, 1);
-
-        lineEdit_2 = new QLineEdit(widget2);
-        lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
-
-        gridLayout->addWidget(lineEdit_2, 1, 1, 1, 1);
-
-        label_38 = new QLabel(widget2);
-        label_38->setObjectName(QString::fromUtf8("label_38"));
-
-        gridLayout->addWidget(label_38, 2, 0, 1, 1);
-
-        lineEdit_3 = new QLineEdit(widget2);
-        lineEdit_3->setObjectName(QString::fromUtf8("lineEdit_3"));
-
-        gridLayout->addWidget(lineEdit_3, 2, 1, 1, 1);
-
-        label_40 = new QLabel(widget2);
-        label_40->setObjectName(QString::fromUtf8("label_40"));
-
-        gridLayout->addWidget(label_40, 3, 0, 1, 1);
-
-        lineEdit_6 = new QLineEdit(widget2);
-        lineEdit_6->setObjectName(QString::fromUtf8("lineEdit_6"));
-
-        gridLayout->addWidget(lineEdit_6, 3, 1, 1, 1);
-
-        horizontalSlider = new QSlider(widget2);
-        horizontalSlider->setObjectName(QString::fromUtf8("horizontalSlider"));
-        horizontalSlider->setOrientation(Qt::Horizontal);
-
-        gridLayout->addWidget(horizontalSlider, 4, 0, 1, 2);
-
-        horizontalSlider->raise();
-        label_33->raise();
-        lineEdit->raise();
-        label_34->raise();
-        lineEdit_2->raise();
-        label_38->raise();
-        lineEdit_3->raise();
-        label_40->raise();
-        lineEdit_6->raise();
-
-        horizontalLayout->addWidget(groupBox_10);
-
-        groupBox_11 = new QGroupBox(widget);
-        groupBox_11->setObjectName(QString::fromUtf8("groupBox_11"));
-        radioButton = new QRadioButton(groupBox_11);
-        radioButton->setObjectName(QString::fromUtf8("radioButton"));
-        radioButton->setGeometry(QRect(161, 102, 75, 23));
-        radioButton_2 = new QRadioButton(groupBox_11);
-        radioButton_2->setObjectName(QString::fromUtf8("radioButton_2"));
-        radioButton_2->setGeometry(QRect(161, 182, 75, 23));
-        radioButton_3 = new QRadioButton(groupBox_11);
-        radioButton_3->setObjectName(QString::fromUtf8("radioButton_3"));
-        radioButton_3->setGeometry(QRect(161, 222, 75, 23));
-        radioButton_4 = new QRadioButton(groupBox_11);
-        radioButton_4->setObjectName(QString::fromUtf8("radioButton_4"));
-        radioButton_4->setGeometry(QRect(161, 142, 75, 23));
-        radioButton_9 = new QRadioButton(groupBox_11);
-        radioButton_9->setObjectName(QString::fromUtf8("radioButton_9"));
-        radioButton_9->setGeometry(QRect(161, 262, 75, 23));
-        label_41 = new QLabel(groupBox_11);
-        label_41->setObjectName(QString::fromUtf8("label_41"));
-        label_41->setGeometry(QRect(11, 577, 121, 18));
-        line_3 = new QFrame(groupBox_11);
-        line_3->setObjectName(QString::fromUtf8("line_3"));
-        line_3->setGeometry(QRect(11, 568, 529, 16));
-        line_3->setFrameShape(QFrame::HLine);
-        line_3->setFrameShadow(QFrame::Sunken);
-        checkBox = new QCheckBox(groupBox_11);
-        checkBox->setObjectName(QString::fromUtf8("checkBox"));
-        checkBox->setGeometry(QRect(279, 577, 80, 23));
-        pushButton_4 = new QPushButton(groupBox_11);
-        pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
-        pushButton_4->setGeometry(QRect(21, 311, 132, 28));
-        sizePolicy1.setHeightForWidth(pushButton_4->sizePolicy().hasHeightForWidth());
-        pushButton_4->setSizePolicy(sizePolicy1);
-        radioButton_10 = new QRadioButton(groupBox_11);
-        radioButton_10->setObjectName(QString::fromUtf8("radioButton_10"));
-        radioButton_10->setGeometry(QRect(159, 313, 80, 23));
-        pushButton_3 = new QPushButton(groupBox_11);
-        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
-        pushButton_3->setGeometry(QRect(21, 111, 129, 181));
-        sizePolicy1.setHeightForWidth(pushButton_3->sizePolicy().hasHeightForWidth());
-        pushButton_3->setSizePolicy(sizePolicy1);
-
-        horizontalLayout->addWidget(groupBox_11);
-
-        tab1->addTab(tab_9, QString());
-        tab_10 = new QWidget();
-        tab_10->setObjectName(QString::fromUtf8("tab_10"));
-        progressBar = new QProgressBar(tab_10);
-        progressBar->setObjectName(QString::fromUtf8("progressBar"));
-        progressBar->setGeometry(QRect(0, 420, 861, 23));
-        progressBar->setValue(24);
-        label_39 = new QLabel(tab_10);
-        label_39->setObjectName(QString::fromUtf8("label_39"));
-        label_39->setGeometry(QRect(380, 380, 67, 17));
-        widget3 = new QWidget(tab_10);
-        widget3->setObjectName(QString::fromUtf8("widget3"));
-        widget3->setGeometry(QRect(10, 40, 841, 30));
-        horizontalLayout_2 = new QHBoxLayout(widget3);
-        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
-        horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
-        label_42 = new QLabel(widget3);
-        label_42->setObjectName(QString::fromUtf8("label_42"));
-
-        horizontalLayout_2->addWidget(label_42);
-
-        lineEdit_4 = new QLineEdit(widget3);
-        lineEdit_4->setObjectName(QString::fromUtf8("lineEdit_4"));
-
-        horizontalLayout_2->addWidget(lineEdit_4);
-
-        pb_execvc_2 = new QPushButton(widget3);
-        pb_execvc_2->setObjectName(QString::fromUtf8("pb_execvc_2"));
-        pb_execvc_2->setFont(font4);
-
-        horizontalLayout_2->addWidget(pb_execvc_2);
-
-        tab1->addTab(tab_10, QString());
         label_2 = new QLabel(ControlCenter);
         label_2->setObjectName(QString::fromUtf8("label_2"));
         label_2->setGeometry(QRect(310, 40, 101, 16));
@@ -1070,19 +1095,9 @@ public:
         label_devtype->setObjectName(QString::fromUtf8("label_devtype"));
         label_devtype->setGeometry(QRect(590, 90, 41, 21));
         label_devtype->setFrameShape(QFrame::Box);
-        label->raise();
-        tab1->raise();
-        label_2->raise();
-        label_seldevice->raise();
-        listWidget->raise();
-        label_8->raise();
-        label_9->raise();
-        label_if->raise();
-        label_aif->raise();
-        pb_reset->raise();
-        label_20->raise();
-        label_devtype->raise();
-        groupBox_11->raise();
+        resetToMode = new QPushButton(ControlCenter);
+        resetToMode->setObjectName(QString::fromUtf8("resetToMode"));
+        resetToMode->setGeometry(QRect(700, 60, 171, 27));
         QWidget::setTabOrder(rb3_custom, rb3_out);
         QWidget::setTabOrder(rb3_out, rb3_in);
         QWidget::setTabOrder(rb3_in, le3_bm);
@@ -1163,9 +1178,9 @@ public:
         QObject::connect(rb3_eedl, SIGNAL(clicked()), rb3_out, SLOT(click()));
         QObject::connect(pb3, SIGNAL(clicked()), le3_out_ascii, SLOT(clear()));
 
-        tab1->setCurrentIndex(5);
+        tab1->setCurrentIndex(0);
         tab2->setCurrentIndex(1);
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(ControlCenter);
@@ -1175,18 +1190,6 @@ public:
     {
         ControlCenter->setWindowTitle(QApplication::translate("ControlCenter", "CyUSB Suite for Linux", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("ControlCenter", "List of devices", 0, QApplication::UnicodeUTF8));
-        pb_clear->setText(QApplication::translate("ControlCenter", "Clear", 0, QApplication::UnicodeUTF8));
-        groupBox->setTitle(QApplication::translate("ControlCenter", "Interface", 0, QApplication::UnicodeUTF8));
-        label_4->setText(QApplication::translate("ControlCenter", "Num.of Ifaces", 0, QApplication::UnicodeUTF8));
-        label_5->setText(QApplication::translate("ControlCenter", "Select Iface", 0, QApplication::UnicodeUTF8));
-        label_6->setText(QApplication::translate("ControlCenter", "Num.of alternate interfaces", 0, QApplication::UnicodeUTF8));
-        label_7->setText(QApplication::translate("ControlCenter", "Select Alternate Interface", 0, QApplication::UnicodeUTF8));
-        cb_kerneldriver->setText(QApplication::translate("ControlCenter", "Interface claimed", 0, QApplication::UnicodeUTF8));
-        pb_kerneldetach->setText(QApplication::translate("ControlCenter", "Detach", 0, QApplication::UnicodeUTF8));
-        pb_setIFace->setText(QApplication::translate("ControlCenter", "Set IFace", 0, QApplication::UnicodeUTF8));
-        pb_setAltIf->setText(QApplication::translate("ControlCenter", "Set Alt.IF", 0, QApplication::UnicodeUTF8));
-        label_21->setText(QApplication::translate("ControlCenter", " If#    Alt    EP#    I/O    Type   MaxPS  Interval", 0, QApplication::UnicodeUTF8));
-        tab1->setTabText(tab1->indexOf(tab), QApplication::translate("ControlCenter", "Descriptors", 0, QApplication::UnicodeUTF8));
         groupBox_2->setTitle(QApplication::translate("ControlCenter", "Download to ->", 0, QApplication::UnicodeUTF8));
         rb1_ram->setText(QApplication::translate("ControlCenter", "RAM", 0, QApplication::UnicodeUTF8));
         rb1_small->setText(QApplication::translate("ControlCenter", "Small EEPROM", 0, QApplication::UnicodeUTF8));
@@ -1200,17 +1203,57 @@ public:
         rb_internal->setText(QApplication::translate("ControlCenter", "Internal", 0, QApplication::UnicodeUTF8));
         rb_external->setText(QApplication::translate("ControlCenter", "External", 0, QApplication::UnicodeUTF8));
         tab2->setTabText(tab2->indexOf(tab_4), QApplication::translate("ControlCenter", "FX2", 0, QApplication::UnicodeUTF8));
-        label4_file->setText(QString());
-        pb4_selfile->setText(QApplication::translate("ControlCenter", "Select File", 0, QApplication::UnicodeUTF8));
-        pb4_start->setText(QApplication::translate("ControlCenter", "Start Download", 0, QApplication::UnicodeUTF8));
-        pb4_clear->setText(QApplication::translate("ControlCenter", "clear", 0, QApplication::UnicodeUTF8));
-        label_23->setText(QApplication::translate("ControlCenter", "Selected File", 0, QApplication::UnicodeUTF8));
-        groupBox_5->setTitle(QApplication::translate("ControlCenter", "Download to ->", 0, QApplication::UnicodeUTF8));
+        pb4_selfile->setText(QApplication::translate("ControlCenter", "\351\200\211\346\213\251 Flash \346\226\207\344\273\266", 0, QApplication::UnicodeUTF8));
+        pb4_start->setText(QApplication::translate("ControlCenter", "\345\274\200\345\247\213\344\270\213\350\275\275", 0, QApplication::UnicodeUTF8));
+        pb4_clear->setText(QApplication::translate("ControlCenter", "\346\270\205\351\231\244", 0, QApplication::UnicodeUTF8));
+        groupBox_5->setTitle(QApplication::translate("ControlCenter", "\344\270\213\350\275\275\345\210\260->", 0, QApplication::UnicodeUTF8));
         rb4_ram->setText(QApplication::translate("ControlCenter", "RAM", 0, QApplication::UnicodeUTF8));
         rb4_i2c->setText(QApplication::translate("ControlCenter", "I2C EEPROM", 0, QApplication::UnicodeUTF8));
         rb4_spi->setText(QApplication::translate("ControlCenter", "SPI Flash", 0, QApplication::UnicodeUTF8));
+        label_39->setText(QApplication::translate("ControlCenter", "\351\200\211\346\213\251flash\346\226\207\344\273\266", 0, QApplication::UnicodeUTF8));
+        label4_file->setText(QString());
         tab2->setTabText(tab2->indexOf(tab_5), QApplication::translate("ControlCenter", "FX3", 0, QApplication::UnicodeUTF8));
-        tab1->setTabText(tab1->indexOf(tab_3), QApplication::translate("ControlCenter", "Program", 0, QApplication::UnicodeUTF8));
+        tab1->setTabText(tab1->indexOf(tab_3), QApplication::translate("ControlCenter", "\347\250\213\345\272\217\344\270\213\350\275\275", 0, QApplication::UnicodeUTF8));
+        statusLabel->setText(QString());
+        label_43->setText(QString());
+        label_42->setText(QApplication::translate("ControlCenter", "\345\275\223\345\211\215\346\226\207\344\273\266", 0, QApplication::UnicodeUTF8));
+        fileNameSelectButton->setText(QString());
+        downloadButton->setText(QApplication::translate("ControlCenter", "\344\270\213\350\275\275", 0, QApplication::UnicodeUTF8));
+        tab1->setTabText(tab1->indexOf(tab_10), QApplication::translate("ControlCenter", "Isp\344\270\213\350\275\275", 0, QApplication::UnicodeUTF8));
+        groupBox_9->setTitle(QApplication::translate("ControlCenter", "ScreenControl", 0, QApplication::UnicodeUTF8));
+        screenOffButton->setText(QApplication::translate("ControlCenter", "screenOff", 0, QApplication::UnicodeUTF8));
+        screenOnButton->setText(QApplication::translate("ControlCenter", "screenOn", 0, QApplication::UnicodeUTF8));
+        groupBox_10->setTitle(QApplication::translate("ControlCenter", "LuminaceControl", 0, QApplication::UnicodeUTF8));
+        label_33->setText(QApplication::translate("ControlCenter", "currentLum", 0, QApplication::UnicodeUTF8));
+        label_34->setText(QApplication::translate("ControlCenter", "minLum", 0, QApplication::UnicodeUTF8));
+        label_38->setText(QApplication::translate("ControlCenter", "maxLum", 0, QApplication::UnicodeUTF8));
+        label_40->setText(QApplication::translate("ControlCenter", "setLum", 0, QApplication::UnicodeUTF8));
+        getPushButton->setText(QApplication::translate("ControlCenter", "GET", 0, QApplication::UnicodeUTF8));
+        setPushButton->setText(QApplication::translate("ControlCenter", "SET", 0, QApplication::UnicodeUTF8));
+        groupBox_11->setTitle(QApplication::translate("ControlCenter", "ModeSet", 0, QApplication::UnicodeUTF8));
+        cd_120RadioButton->setText(QApplication::translate("ControlCenter", "120cd", 0, QApplication::UnicodeUTF8));
+        cd_300RadioButton->setText(QApplication::translate("ControlCenter", "300cd", 0, QApplication::UnicodeUTF8));
+        cd_500RadioButton->setText(QApplication::translate("ControlCenter", "500cd", 0, QApplication::UnicodeUTF8));
+        cd_200RadioButton->setText(QApplication::translate("ControlCenter", "200cd", 0, QApplication::UnicodeUTF8));
+        cd_800RadioButton->setText(QApplication::translate("ControlCenter", "800cd", 0, QApplication::UnicodeUTF8));
+        label_41->setText(QApplication::translate("ControlCenter", "manualModeset", 0, QApplication::UnicodeUTF8));
+        checkBox->setText(QApplication::translate("ControlCenter", "enable", 0, QApplication::UnicodeUTF8));
+        pushButton_4->setText(QApplication::translate("ControlCenter", "manulModeSet", 0, QApplication::UnicodeUTF8));
+        enbaleManRadioButton->setText(QApplication::translate("ControlCenter", "enable", 0, QApplication::UnicodeUTF8));
+        pushButton_3->setText(QApplication::translate("ControlCenter", "persetModeSet", 0, QApplication::UnicodeUTF8));
+        tab1->setTabText(tab1->indexOf(tab_9), QApplication::translate("ControlCenter", "\346\230\276\347\244\272", 0, QApplication::UnicodeUTF8));
+        pb_clear->setText(QApplication::translate("ControlCenter", "Clear", 0, QApplication::UnicodeUTF8));
+        groupBox->setTitle(QApplication::translate("ControlCenter", "Interface", 0, QApplication::UnicodeUTF8));
+        label_4->setText(QApplication::translate("ControlCenter", "Num.of Ifaces", 0, QApplication::UnicodeUTF8));
+        label_5->setText(QApplication::translate("ControlCenter", "Select Iface", 0, QApplication::UnicodeUTF8));
+        label_6->setText(QApplication::translate("ControlCenter", "Num.of alternate interfaces", 0, QApplication::UnicodeUTF8));
+        label_7->setText(QApplication::translate("ControlCenter", "Select Alternate Interface", 0, QApplication::UnicodeUTF8));
+        cb_kerneldriver->setText(QApplication::translate("ControlCenter", "Interface claimed", 0, QApplication::UnicodeUTF8));
+        pb_kerneldetach->setText(QApplication::translate("ControlCenter", "Detach", 0, QApplication::UnicodeUTF8));
+        pb_setIFace->setText(QApplication::translate("ControlCenter", "Set IFace", 0, QApplication::UnicodeUTF8));
+        pb_setAltIf->setText(QApplication::translate("ControlCenter", "Set Alt.IF", 0, QApplication::UnicodeUTF8));
+        label_21->setText(QApplication::translate("ControlCenter", " If#    Alt    EP#    I/O    Type   MaxPS  Interval", 0, QApplication::UnicodeUTF8));
+        tab1->setTabText(tab1->indexOf(tab), QApplication::translate("ControlCenter", "Descriptors", 0, QApplication::UnicodeUTF8));
         groupBox_4->setTitle(QApplication::translate("ControlCenter", "Command", 0, QApplication::UnicodeUTF8));
         rb3_ramdl->setText(QApplication::translate("ControlCenter", "RAM (Ext.) Download", 0, QApplication::UnicodeUTF8));
         rb3_ramup->setText(QApplication::translate("ControlCenter", "RAM (Ext.) Upload", 0, QApplication::UnicodeUTF8));
@@ -1302,30 +1345,6 @@ public:
         pb7_clearhalt_out->setText(QApplication::translate("ControlCenter", "Clear Halt", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(tab_8), QApplication::translate("ControlCenter", "Isochronous", 0, QApplication::UnicodeUTF8));
         tab1->setTabText(tab1->indexOf(tab_2), QApplication::translate("ControlCenter", " Data Transfers", 0, QApplication::UnicodeUTF8));
-        groupBox_9->setTitle(QApplication::translate("ControlCenter", "ScreenControl", 0, QApplication::UnicodeUTF8));
-        pushButton->setText(QApplication::translate("ControlCenter", "screenOff", 0, QApplication::UnicodeUTF8));
-        pushButton_2->setText(QApplication::translate("ControlCenter", "screenOn", 0, QApplication::UnicodeUTF8));
-        groupBox_10->setTitle(QApplication::translate("ControlCenter", "LuminaceControl", 0, QApplication::UnicodeUTF8));
-        label_33->setText(QApplication::translate("ControlCenter", "currentLum", 0, QApplication::UnicodeUTF8));
-        label_34->setText(QApplication::translate("ControlCenter", "minLum", 0, QApplication::UnicodeUTF8));
-        label_38->setText(QApplication::translate("ControlCenter", "maxLum", 0, QApplication::UnicodeUTF8));
-        label_40->setText(QApplication::translate("ControlCenter", "setLum", 0, QApplication::UnicodeUTF8));
-        groupBox_11->setTitle(QApplication::translate("ControlCenter", "ModeSet", 0, QApplication::UnicodeUTF8));
-        radioButton->setText(QApplication::translate("ControlCenter", "120cd", 0, QApplication::UnicodeUTF8));
-        radioButton_2->setText(QApplication::translate("ControlCenter", "300cd", 0, QApplication::UnicodeUTF8));
-        radioButton_3->setText(QApplication::translate("ControlCenter", "500cd", 0, QApplication::UnicodeUTF8));
-        radioButton_4->setText(QApplication::translate("ControlCenter", "200cd", 0, QApplication::UnicodeUTF8));
-        radioButton_9->setText(QApplication::translate("ControlCenter", "800cd", 0, QApplication::UnicodeUTF8));
-        label_41->setText(QApplication::translate("ControlCenter", "manualModeset", 0, QApplication::UnicodeUTF8));
-        checkBox->setText(QApplication::translate("ControlCenter", "enable", 0, QApplication::UnicodeUTF8));
-        pushButton_4->setText(QApplication::translate("ControlCenter", "manulModeSet", 0, QApplication::UnicodeUTF8));
-        radioButton_10->setText(QApplication::translate("ControlCenter", "enable", 0, QApplication::UnicodeUTF8));
-        pushButton_3->setText(QApplication::translate("ControlCenter", "persetModeSet", 0, QApplication::UnicodeUTF8));
-        tab1->setTabText(tab1->indexOf(tab_9), QApplication::translate("ControlCenter", "Display", 0, QApplication::UnicodeUTF8));
-        label_39->setText(QApplication::translate("ControlCenter", "TextLabel", 0, QApplication::UnicodeUTF8));
-        label_42->setText(QApplication::translate("ControlCenter", "current firmware file", 0, QApplication::UnicodeUTF8));
-        pb_execvc_2->setText(QApplication::translate("ControlCenter", "Download", 0, QApplication::UnicodeUTF8));
-        tab1->setTabText(tab1->indexOf(tab_10), QApplication::translate("ControlCenter", "Ispdownload", 0, QApplication::UnicodeUTF8));
         label_2->setText(QApplication::translate("ControlCenter", "Selected device", 0, QApplication::UnicodeUTF8));
         label_seldevice->setText(QString());
         label_8->setText(QApplication::translate("ControlCenter", "Selected Interface", 0, QApplication::UnicodeUTF8));
@@ -1335,6 +1354,7 @@ public:
         pb_reset->setText(QApplication::translate("ControlCenter", "Reset Device", 0, QApplication::UnicodeUTF8));
         label_20->setText(QApplication::translate("ControlCenter", "Device Type", 0, QApplication::UnicodeUTF8));
         label_devtype->setText(QApplication::translate("ControlCenter", "FX2", 0, QApplication::UnicodeUTF8));
+        resetToMode->setText(QApplication::translate("ControlCenter", "\346\223\246flash", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };
