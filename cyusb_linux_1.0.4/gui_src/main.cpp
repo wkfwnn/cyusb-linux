@@ -229,13 +229,19 @@ void ControlCenter::on_pb4_start_clicked()
 		QMessageBox mb;
         mb.setText("download fail..");
 		mb.exec();
+
 	}
 	else {
 		QMessageBox mb;
         mb.setText("prepare download");
 		mb.exec();
     }
-
+    if(mainwin->label4_file->text().contains(QString("cyfxflashprog.img"))){
+        QMessageBox mb;
+        mb.warning(this,QString("warning"),QString("img file is not correct\n please reconnect usb device"));
+        mainwin->label4_file->clear();
+        return;
+    }
     r = fx3_spiboot_download(qPrintable(mainwin->label4_file->text()));
     if ( r ) {
         QMessageBox mb;
