@@ -73,7 +73,7 @@
     <enum>QTabWidget::Rounded</enum>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>2</number>
    </property>
    <widget class="QWidget" name="tab_3">
     <attribute name="title">
@@ -517,7 +517,7 @@
       <item>
        <widget class="QGroupBox" name="groupBox_9">
         <property name="title">
-         <string>ScreenControl</string>
+         <string> 屏幕控制</string>
         </property>
         <widget class="QWidget" name="layoutWidget">
          <property name="geometry">
@@ -538,7 +538,7 @@
              </sizepolicy>
             </property>
             <property name="text">
-             <string>screenOff</string>
+             <string>灭屏</string>
             </property>
            </widget>
           </item>
@@ -551,7 +551,7 @@
              </sizepolicy>
             </property>
             <property name="text">
-             <string>screenOn</string>
+             <string>亮屏</string>
             </property>
            </widget>
           </item>
@@ -562,7 +562,7 @@
       <item>
        <widget class="QGroupBox" name="groupBox_10">
         <property name="title">
-         <string>LuminaceControl</string>
+         <string>亮度控制</string>
         </property>
         <widget class="QWidget" name="layoutWidget">
          <property name="geometry">
@@ -577,7 +577,7 @@
           <item row="0" column="0">
            <widget class="QLabel" name="label_33">
             <property name="text">
-             <string>currentLum</string>
+             <string>当前亮度</string>
             </property>
            </widget>
           </item>
@@ -591,7 +591,7 @@
           <item row="1" column="0">
            <widget class="QLabel" name="label_34">
             <property name="text">
-             <string>minLum</string>
+             <string>最小亮度</string>
             </property>
            </widget>
           </item>
@@ -605,7 +605,7 @@
           <item row="2" column="0">
            <widget class="QLabel" name="label_38">
             <property name="text">
-             <string>maxLum</string>
+             <string>最大亮度</string>
             </property>
            </widget>
           </item>
@@ -619,7 +619,7 @@
           <item row="3" column="0">
            <widget class="QLabel" name="label_40">
             <property name="text">
-             <string>setLum</string>
+             <string>设置亮度</string>
             </property>
            </widget>
           </item>
@@ -654,14 +654,14 @@
           <item>
            <widget class="QPushButton" name="getPushButton">
             <property name="text">
-             <string>GET</string>
+             <string>获取</string>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QPushButton" name="setPushButton">
             <property name="text">
-             <string>SET</string>
+             <string>设置</string>
             </property>
            </widget>
           </item>
@@ -672,7 +672,7 @@
       <item>
        <widget class="QGroupBox" name="groupBox_11">
         <property name="title">
-         <string>ModeSet</string>
+         <string>模式设置</string>
         </property>
         <widget class="QRadioButton" name="cd_120RadioButton">
          <property name="geometry">
@@ -794,7 +794,7 @@
           </sizepolicy>
          </property>
          <property name="text">
-          <string>manulModeSet</string>
+          <string>手动模式</string>
          </property>
         </widget>
         <widget class="QRadioButton" name="enbaleManRadioButton">
@@ -826,7 +826,7 @@
           </sizepolicy>
          </property>
          <property name="text">
-          <string>persetModeSet</string>
+          <string>预设模式</string>
          </property>
         </widget>
        </widget>
