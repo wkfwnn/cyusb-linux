@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'controlcenter.ui'
 **
-** Created: Thu Jul 28 19:28:55 2016
+** Created: Wed Aug 10 17:22:02 2016
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -1178,7 +1178,7 @@ public:
         QObject::connect(rb3_eedl, SIGNAL(clicked()), rb3_out, SLOT(click()));
         QObject::connect(pb3, SIGNAL(clicked()), le3_out_ascii, SLOT(clear()));
 
-        tab1->setCurrentIndex(0);
+        tab1->setCurrentIndex(2);
         tab2->setCurrentIndex(1);
         tabWidget->setCurrentIndex(0);
 
@@ -1220,17 +1220,17 @@ public:
         fileNameSelectButton->setText(QString());
         downloadButton->setText(QApplication::translate("ControlCenter", "\344\270\213\350\275\275", 0, QApplication::UnicodeUTF8));
         tab1->setTabText(tab1->indexOf(tab_10), QApplication::translate("ControlCenter", "Isp\344\270\213\350\275\275", 0, QApplication::UnicodeUTF8));
-        groupBox_9->setTitle(QApplication::translate("ControlCenter", "ScreenControl", 0, QApplication::UnicodeUTF8));
-        screenOffButton->setText(QApplication::translate("ControlCenter", "screenOff", 0, QApplication::UnicodeUTF8));
-        screenOnButton->setText(QApplication::translate("ControlCenter", "screenOn", 0, QApplication::UnicodeUTF8));
-        groupBox_10->setTitle(QApplication::translate("ControlCenter", "LuminaceControl", 0, QApplication::UnicodeUTF8));
-        label_33->setText(QApplication::translate("ControlCenter", "currentLum", 0, QApplication::UnicodeUTF8));
-        label_34->setText(QApplication::translate("ControlCenter", "minLum", 0, QApplication::UnicodeUTF8));
-        label_38->setText(QApplication::translate("ControlCenter", "maxLum", 0, QApplication::UnicodeUTF8));
-        label_40->setText(QApplication::translate("ControlCenter", "setLum", 0, QApplication::UnicodeUTF8));
-        getPushButton->setText(QApplication::translate("ControlCenter", "GET", 0, QApplication::UnicodeUTF8));
-        setPushButton->setText(QApplication::translate("ControlCenter", "SET", 0, QApplication::UnicodeUTF8));
-        groupBox_11->setTitle(QApplication::translate("ControlCenter", "ModeSet", 0, QApplication::UnicodeUTF8));
+        groupBox_9->setTitle(QApplication::translate("ControlCenter", " \345\261\217\345\271\225\346\216\247\345\210\266", 0, QApplication::UnicodeUTF8));
+        screenOffButton->setText(QApplication::translate("ControlCenter", "\347\201\255\345\261\217", 0, QApplication::UnicodeUTF8));
+        screenOnButton->setText(QApplication::translate("ControlCenter", "\344\272\256\345\261\217", 0, QApplication::UnicodeUTF8));
+        groupBox_10->setTitle(QApplication::translate("ControlCenter", "\344\272\256\345\272\246\346\216\247\345\210\266", 0, QApplication::UnicodeUTF8));
+        label_33->setText(QApplication::translate("ControlCenter", "\345\275\223\345\211\215\344\272\256\345\272\246", 0, QApplication::UnicodeUTF8));
+        label_34->setText(QApplication::translate("ControlCenter", "\346\234\200\345\260\217\344\272\256\345\272\246", 0, QApplication::UnicodeUTF8));
+        label_38->setText(QApplication::translate("ControlCenter", "\346\234\200\345\244\247\344\272\256\345\272\246", 0, QApplication::UnicodeUTF8));
+        label_40->setText(QApplication::translate("ControlCenter", "\350\256\276\347\275\256\344\272\256\345\272\246", 0, QApplication::UnicodeUTF8));
+        getPushButton->setText(QApplication::translate("ControlCenter", "\350\216\267\345\217\226", 0, QApplication::UnicodeUTF8));
+        setPushButton->setText(QApplication::translate("ControlCenter", "\350\256\276\347\275\256", 0, QApplication::UnicodeUTF8));
+        groupBox_11->setTitle(QApplication::translate("ControlCenter", "\346\250\241\345\274\217\350\256\276\347\275\256", 0, QApplication::UnicodeUTF8));
         cd_120RadioButton->setText(QApplication::translate("ControlCenter", "120cd", 0, QApplication::UnicodeUTF8));
         cd_300RadioButton->setText(QApplication::translate("ControlCenter", "300cd", 0, QApplication::UnicodeUTF8));
         cd_500RadioButton->setText(QApplication::translate("ControlCenter", "500cd", 0, QApplication::UnicodeUTF8));
@@ -1238,9 +1238,9 @@ public:
         cd_800RadioButton->setText(QApplication::translate("ControlCenter", "800cd", 0, QApplication::UnicodeUTF8));
         label_41->setText(QApplication::translate("ControlCenter", "manualModeset", 0, QApplication::UnicodeUTF8));
         checkBox->setText(QApplication::translate("ControlCenter", "enable", 0, QApplication::UnicodeUTF8));
-        pushButton_4->setText(QApplication::translate("ControlCenter", "manulModeSet", 0, QApplication::UnicodeUTF8));
+        pushButton_4->setText(QApplication::translate("ControlCenter", "\346\211\213\345\212\250\346\250\241\345\274\217", 0, QApplication::UnicodeUTF8));
         enbaleManRadioButton->setText(QApplication::translate("ControlCenter", "enable", 0, QApplication::UnicodeUTF8));
-        pushButton_3->setText(QApplication::translate("ControlCenter", "persetModeSet", 0, QApplication::UnicodeUTF8));
+        pushButton_3->setText(QApplication::translate("ControlCenter", "\351\242\204\350\256\276\346\250\241\345\274\217", 0, QApplication::UnicodeUTF8));
         tab1->setTabText(tab1->indexOf(tab_9), QApplication::translate("ControlCenter", "\346\230\276\347\244\272", 0, QApplication::UnicodeUTF8));
         pb_clear->setText(QApplication::translate("ControlCenter", "Clear", 0, QApplication::UnicodeUTF8));
         groupBox->setTitle(QApplication::translate("ControlCenter", "Interface", 0, QApplication::UnicodeUTF8));
