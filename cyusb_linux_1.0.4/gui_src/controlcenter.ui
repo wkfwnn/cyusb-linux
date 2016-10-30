@@ -66,14 +66,14 @@
      <x>-10</x>
      <y>170</y>
      <width>871</width>
-     <height>476</height>
+     <height>421</height>
     </rect>
    </property>
    <property name="tabShape">
     <enum>QTabWidget::Rounded</enum>
    </property>
    <property name="currentIndex">
-    <number>2</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="tab_3">
     <attribute name="title">
@@ -278,7 +278,7 @@
        <property name="geometry">
         <rect>
          <x>220</x>
-         <y>90</y>
+         <y>120</y>
          <width>611</width>
          <height>201</height>
         </rect>
@@ -289,37 +289,11 @@
         </font>
        </property>
       </widget>
-      <widget class="QPushButton" name="pb4_selfile">
-       <property name="geometry">
-        <rect>
-         <x>90</x>
-         <y>190</y>
-         <width>121</width>
-         <height>27</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>选择 Flash 文件</string>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="pb4_start">
-       <property name="geometry">
-        <rect>
-         <x>90</x>
-         <y>230</y>
-         <width>121</width>
-         <height>27</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>开始下载</string>
-       </property>
-      </widget>
       <widget class="QPushButton" name="pb4_clear">
        <property name="geometry">
         <rect>
-         <x>170</x>
-         <y>260</y>
+         <x>180</x>
+         <y>290</y>
          <width>41</width>
          <height>27</height>
         </rect>
@@ -332,8 +306,8 @@
        <property name="geometry">
         <rect>
          <x>10</x>
-         <y>10</y>
-         <width>191</width>
+         <y>80</y>
+         <width>161</width>
          <height>101</height>
         </rect>
        </property>
@@ -385,7 +359,7 @@
         <rect>
          <x>200</x>
          <y>30</y>
-         <width>121</width>
+         <width>101</width>
          <height>20</height>
         </rect>
        </property>
@@ -408,6 +382,107 @@
        <property name="text">
         <string/>
        </property>
+      </widget>
+      <widget class="QLabel" name="label_44">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>60</y>
+         <width>101</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>选择isp 文件</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="isp_file_name">
+       <property name="geometry">
+        <rect>
+         <x>330</x>
+         <y>60</y>
+         <width>511</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Box</enum>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>190</y>
+         <width>131</width>
+         <height>98</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <widget class="QPushButton" name="pb4_selfile">
+          <property name="text">
+           <string>选择 Flash 文件</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QPushButton" name="isp_download">
+          <property name="text">
+           <string>选择 isp 文件</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QPushButton" name="pb4_start">
+          <property name="text">
+           <string>开始下载</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_12">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>161</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string/>
+       </property>
+       <widget class="QRadioButton" name="only_download_flash">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>151</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>只下载flash文件</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="all_download">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>30</y>
+          <width>121</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>全部下载</string>
+        </property>
+       </widget>
       </widget>
      </widget>
     </widget>
@@ -485,19 +560,20 @@
         </property>
        </widget>
       </item>
-      <item>
-       <widget class="QPushButton" name="downloadButton">
-        <property name="font">
-         <font>
-          <pointsize>11</pointsize>
-         </font>
-        </property>
-        <property name="text">
-         <string>下载</string>
-        </property>
-       </widget>
-      </item>
      </layout>
+    </widget>
+    <widget class="QPushButton" name="downloadButton">
+     <property name="geometry">
+      <rect>
+       <x>770</x>
+       <y>40</y>
+       <width>97</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>下载</string>
+     </property>
     </widget>
    </widget>
    <widget class="QWidget" name="tab_9">
@@ -2904,6 +2980,32 @@
    </property>
    <property name="text">
     <string>擦flash</string>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="cx3_firmware_process_bar">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>600</y>
+     <width>781</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="value">
+    <number>24</number>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="isp_download_proces_bar">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>630</y>
+     <width>781</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="value">
+    <number>24</number>
    </property>
   </widget>
  </widget>

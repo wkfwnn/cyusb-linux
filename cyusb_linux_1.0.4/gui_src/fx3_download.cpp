@@ -163,13 +163,14 @@ int fx3_usbboot_download(const char *filename)
 	index    = 4;
 	checksum = 0;
 	while ( index < filesize ) {
+
 		data_p  = (unsigned int *)(fwBuf + index);
 		length  = data_p[0];
 		address = data_p[1];
 		if (length != 0) {
 			for (i = 0; i < length; i++)
 				checksum += data_p[2 + i];
-			r = ram_write(fwBuf + index + 8, address, length * 4);
+            r = ram_write(fwBuf + index + 8, address, length * 4);
 			if (r != 0) {
 				printf("Failed to download data to FX3 RAM\n");
 				sb->showMessage("Error: Write to FX3 RAM failed", 5000);
@@ -191,7 +192,7 @@ int fx3_usbboot_download(const char *filename)
 			break;
 		}
 
-		index += (8 + length * 4);
+        index += (8 + length * 4);
 	}
 
 	free(fwBuf);
@@ -224,7 +225,7 @@ static int get_fx3_prog_handle(void)
 
 	r = check_fx3_flashprog(h);
 	if ( r == 0 )
-		return 0;
+        //return 0;
 
 	printf("Failed to find FX3 flash programmer\n");
 	printf("Trying to download flash programmer to RAM\n");
@@ -244,10 +245,10 @@ static int get_fx3_prog_handle(void)
 	r = stat(progfile_p, &filestat);
 	if ( r != 0 ) {
 		printf("Failed to find cyfxflashprog.img file\n");
-		return -1;
+        //return -1;
 	}
 
-	r = fx3_usbboot_download(progfile_p);
+    r = fx3_usbboot_download( qPrintable(QString("/home/linux/app/cyfxflashprog.img")));
 	free (progfile_p);
 	if ( r != 0 ) {
 		printf("Failed to download flash prog utility\n");
@@ -337,7 +338,7 @@ int fx3_i2cboot_download(const char *filename)
 	unsigned char *fwBuf = 0;
 
 	// Check if we have a handle to the FX3 flash programmer.
-	r = get_fx3_prog_handle();
+    r = get_fx3_prog_handle();
 	if ( r != 0 ) {
 		printf("FX3 flash programmer not found\n");
 		sb->showMessage("Error: Could not find target device", 5000);
@@ -440,6 +441,7 @@ static int spi_write(unsigned char *buf, int len)
 		index += size;
 		len   -= size;
 		page_address += (size / SPI_PAGE_SIZE);
+        printf("index:%d\n",index);
 	}
 
 	return 0;
@@ -517,7 +519,7 @@ int fx3_spiboot_download(const char *filename)
 			return -4;
 		}
 	}
-
+    printf("filesize: %d\n",filesize);
 	r = spi_write(fwBuf, filesize);
 	if (r != 0) {
 		printf("SPI write failed\n");

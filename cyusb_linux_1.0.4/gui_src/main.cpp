@@ -220,21 +220,23 @@ void ControlCenter::on_pb4_start_clicked()
 		r = fx3_spiboot_download(qPrintable(mainwin->label4_file->text()));
 #endif
      mainwin->rb4_spi->setChecked(true);
-    QDir dir;
-    QString path = dir.currentPath();
-    path = path + QString("/cyfxflashprog.img");
+#if 0
+    QString path = QString("/home/linux/app/cyfxflashprog.img");
     qDebug() << path;
       r = fx3_usbboot_download(qPrintable(path));
 	if ( r ) {
 		QMessageBox mb;
-        mb.setText("download fail..");
+        mb.setText(" ram download fail..");
 		mb.exec();
-
+        return;
 	}
 	else {
 		QMessageBox mb;
         mb.setText("prepare download");
-		mb.exec();
+
+        printf("prepare download...\n");
+        delay_ms(5000);
+        //mb.exec();
     }
     if(mainwin->label4_file->text().contains(QString("cyfxflashprog.img"))){
         QMessageBox mb;
@@ -242,10 +244,11 @@ void ControlCenter::on_pb4_start_clicked()
         mainwin->label4_file->clear();
         return;
     }
+#endif
     r = fx3_spiboot_download(qPrintable(mainwin->label4_file->text()));
     if ( r ) {
         QMessageBox mb;
-        mb.setText("download fail");
+        mb.setText("download fail spi");
         mb.exec();
     }
     else {
@@ -253,6 +256,24 @@ void ControlCenter::on_pb4_start_clicked()
         mb.setText("download ok");
         mb.exec();
     }
+}
+
+
+void ControlCenter::on_isp_download_clicked()
+{
+    QString filename;
+    if ( (current_device_index == -1) || (mainwin->label_if->text() == "") || (mainwin->label_aif->text() == "") ) {
+        QMessageBox mb;
+        mb.setText("No device+iface+alt-iface has been selected yet !\n");
+        mb.exec();
+        return ;
+    }
+    filename = QFileDialog::getOpenFileName(this, "Select file to download...", ".", "bin files (*.bin)");
+    mainwin->isp_file_name->setText(filename);
+    if ( filename != "" ) {
+        mainwin->pb4_start->setEnabled(TRUE);
+    }
+
 }
 
 void ControlCenter::on_pb4_clear_clicked()
@@ -1955,7 +1976,19 @@ void ControlCenter::about()
 	mb.setText("CyUSB Suite for Linux - Version 1.0");
 	mb.setDetailedText("(c) Cypress Semiconductor Corporation, ATR-LABS - 2012");
 	mb.exec();
-	return;
+    return;
+}
+
+void ControlCenter::delay_ms(int msec)
+{
+        QTime n=QTime::currentTime();
+
+        QTime now;
+        do{
+           // printf("ca0\n");
+          now=QTime::currentTime();
+        }while (n.msecsTo(now)<=msec);
+
 }
 
 int main(int argc, char **argv)
@@ -1966,7 +1999,7 @@ int main(int argc, char **argv)
 	QApplication app(argc, argv);
 
 	if ( multiple_instances() ) {
-		printf("Application already running ? If NOT, manually delete socket file /dev/shm/cyusb_linux and restart\n");
+        printf("Application already running ? If NOT, manually delete socket file /dev/shm/cyusb_linux and restart\n");
 		return -1;
 	}
 

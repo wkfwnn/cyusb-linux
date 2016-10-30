@@ -24,9 +24,13 @@ ControlCenter::ControlCenter(QWidget *parent) : QWidget(parent)
 {
 	setupUi(this);
     //wangkf add
+    this->tab1->setTabEnabled(1,false);
+    this->tab1->setTabEnabled(2,false);
     this->tab1->setTabEnabled(3,false);
     this->tab1->setTabEnabled(4,false);
     this->tab1->setTabEnabled(5,false);
+    this->only_download_flash->setChecked(false);
+    this->all_download->setChecked(true);
     mThread = new Ota_Thread;
     connect(mThread,SIGNAL(sendStatus(QString,int)),this,SLOT(receiveOtaThreadStatus(QString,int)));
     this->progressBar->hide();

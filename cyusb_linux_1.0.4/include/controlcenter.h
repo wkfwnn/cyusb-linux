@@ -27,6 +27,7 @@ public slots:
 	void on_pb7_send_clicked();
 	void appExit();
 	void about();
+    void delay_ms(int msec);
 
 private slots:
 	void on_pb_kerneldetach_clicked();
@@ -94,6 +95,8 @@ private slots:
     void receiveOtaThreadStatus(QString,int);
 
     void on_resetToMode_clicked();
+
+    void on_isp_download_clicked();
 
 private:
       Ota_Thread *mThread;
