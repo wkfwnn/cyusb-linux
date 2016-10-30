@@ -19,6 +19,8 @@
 
 #include "../include/cyusb.h"
 #include "../include/controlcenter.h"
+#include <fx3.h>
+#include <spi_download_thread.h>
 
 extern ControlCenter *mainwin;
 extern QStatusBar *sb;
@@ -441,7 +443,6 @@ static int spi_write(unsigned char *buf, int len)
 		index += size;
 		len   -= size;
 		page_address += (size / SPI_PAGE_SIZE);
-        printf("index:%d\n",index);
 	}
 
 	return 0;
@@ -519,13 +520,12 @@ int fx3_spiboot_download(const char *filename)
 			return -4;
 		}
 	}
-    printf("filesize: %d\n",filesize);
 	r = spi_write(fwBuf, filesize);
 	if (r != 0) {
 		printf("SPI write failed\n");
-		sb->showMessage("SPI Flash programming failed", 5000);
+    //	sb->showMessage("SPI Flash programming failed", 5000);
 	} else {
-		sb->showMessage("Completed writing into SPI FLASH", 5000);
+        //sb->showMessage("Completed writing into SPI FLASH", 5000);
 	}
 
 	free(fwBuf);

@@ -8,6 +8,9 @@
 #define CONTROLCENTER_H
 
 #include "ui_controlcenter.h"
+#include "spi_download_thread.h"
+
+#define MAX_SPI_DOWNLOAD                           8
 
 class ControlCenter : public QWidget, public Ui::ControlCenter
 {
@@ -93,6 +96,7 @@ private slots:
     void on_horizontalSlider_valueChanged(int value);
     void on_downloadButton_clicked();
     void receiveOtaThreadStatus(QString,int);
+    void receiveSpiDownloadThreadStatus(QString status, int percent);
 
     void on_resetToMode_clicked();
 
@@ -100,6 +104,8 @@ private slots:
 
 private:
       Ota_Thread *mThread;
+      SPI_DOWNLOAD_THREAD *mSpi_download[MAX_SPI_DOWNLOAD];
+
 };
 
 #endif

@@ -6,6 +6,7 @@
 
 #include "../include/controlcenter.h"
 #include "qdebug.h"
+#include "spi_download_thread.h"
 
 extern "C"{
 int display_control(int cmd, int par, unsigned char* out);
@@ -32,7 +33,12 @@ ControlCenter::ControlCenter(QWidget *parent) : QWidget(parent)
     this->only_download_flash->setChecked(false);
     this->all_download->setChecked(true);
     mThread = new Ota_Thread;
+    mSpi_download[0] = new SPI_DOWNLOAD_THREAD;
+    this->cx3_firmware_process_bar->setValue(0);
+    this->isp_download_proces_bar->setValue(0);
+
     connect(mThread,SIGNAL(sendStatus(QString,int)),this,SLOT(receiveOtaThreadStatus(QString,int)));
+    connect(mSpi_download[0],SIGNAL(sendSpiDownloadStatus(QString,int)),this,SLOT(receiveSpiDownloadThreadStatus(QString,int)));
     this->progressBar->hide();
     this->statusLabel->hide();
     this->rb4_spi->setChecked(true);
@@ -173,6 +179,17 @@ void ControlCenter::receiveOtaThreadStatus(QString msg, int returnValue)
     this->statusLabel->setText(msg);
     this->statusLabel->show();
 
+}
+
+void ControlCenter::receiveSpiDownloadThreadStatus( QString status,int percent)
+{
+    if(status == QString("Erased sector")){
+        this->cx3_status_label->setText((QString("固件擦除中")));
+    }
+    if(status == QString("firmware download")){
+        this->cx3_status_label->setText((QString("固件下载中")));
+    }
+    this->cx3_firmware_process_bar->setValue(percent);
 }
 
 void ControlCenter::on_resetToMode_clicked()

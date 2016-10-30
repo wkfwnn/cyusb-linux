@@ -22,6 +22,7 @@
 #include <stdlib.h>
 #include <pthread.h>
 #include <sys/time.h>
+#include <fx3.h>
 
 #include "../include/controlcenter.h"
 #include "../include/cyusb.h"
@@ -47,11 +48,7 @@ extern char logfile[256];
 extern int logfd;
 extern int pidfd;
 
-extern int fx2_ram_download(const char *filename, int extension);
-extern int fx2_eeprom_download(const char *filename, int large);
-extern int fx3_usbboot_download(const char *filename);
-extern int fx3_i2cboot_download(const char *filename);
-extern int fx3_spiboot_download(const char *filename);
+
 
 struct DEVICE_SUMMARY {
 	int	ifnum;
@@ -244,7 +241,7 @@ void ControlCenter::on_pb4_start_clicked()
         mainwin->label4_file->clear();
         return;
     }
-#endif
+
     r = fx3_spiboot_download(qPrintable(mainwin->label4_file->text()));
     if ( r ) {
         QMessageBox mb;
@@ -256,6 +253,9 @@ void ControlCenter::on_pb4_start_clicked()
         mb.setText("download ok");
         mb.exec();
     }
+#endif
+    this->mSpi_download[0]->setCx3FimwareName(mainwin->label4_file->text());
+    this->mSpi_download[0]->start();
 }
 
 
