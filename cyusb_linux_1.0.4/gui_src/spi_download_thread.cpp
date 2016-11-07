@@ -58,19 +58,30 @@ void SPI_DOWNLOAD_THREAD::setCx3FimwareName(QString cx3FimwareName)
     mCx3FimwareName = cx3FimwareName;
 }
 
+void SPI_DOWNLOAD_THREAD::setIspFimwareName(QString ispFirmwareName)
+{
+    mIspFirmwareName = ispFirmwareName;
+
+}
 void SPI_DOWNLOAD_THREAD::run()
 {
     int r  = 0 ;
-    r = fx3_spiboot_download(qPrintable(mCx3FimwareName));
-    if ( r ) {
+    r = this->fx3_spiboot_download(qPrintable(mCx3FimwareName));
+    if(r  == 0){
+        emit sendSpiDownloadStatus(QString("firmware download ok"),100);
 
-    }
-    else {
-
+    }else{
+        emit sendSpiDownloadStatus(QString("firmware download fail"),0);
+        return;
     }
     if(mIsDownloadIspFirmware){
+        qDebug() << mIspFirmwareName;
+        //r = this->fx3_i2cboot_download(qPrintable(mIspFirmwareName));
+        if(r == 0){
 
+        }else{
 
+        }
     }
 
 }
@@ -84,7 +95,7 @@ int SPI_DOWNLOAD_THREAD::fx3_spiboot_download(const char *filename)
     r = get_fx3_prog_handle();
     if ( r != 0 ) {
         printf("FX3 flash programmer not found\n");
-        sb->showMessage("Error: Could not find target device", 5000);
+        emit sendDownloadFailStatus(QString("Error: Could not find target device"));
         return -1;
     }
 
@@ -92,13 +103,15 @@ int SPI_DOWNLOAD_THREAD::fx3_spiboot_download(const char *filename)
     fwBuf = (unsigned char *)calloc (1, MAX_FWIMG_SIZE);
     if ( fwBuf == 0 ) {
         printf("Failed to allocate buffer to store firmware binary\n");
-        sb->showMessage("Error: Failed to get memory for download\n", 5000);
+        emit sendDownloadFailStatus(QString("Error: Failed to get memory for download\n"));
+        //sb->showMessage("Error: Failed to get memory for download\n", 5000);
         return -2;
     }
 
     if ( read_firmware_image(filename, fwBuf, NULL) ) {
         printf("File %s does not contain valid FX3 firmware image\n", filename);
-        sb->showMessage("Error: Failed to find valid FX3 firmware image", 5000);
+        emit sendDownloadFailStatus(QString("Error: Failed to find valid FX3 firmware image\n"));
+        //sb->showMessage("Error: Failed to find valid FX3 firmware image", 5000);
         free(fwBuf);
         return -3;
     }
@@ -111,7 +124,8 @@ int SPI_DOWNLOAD_THREAD::fx3_spiboot_download(const char *filename)
         r = spi_erase_sector(i,number_setor);
         if (r != 0) {
             printf("Failed to erase SPI flash\n");
-            sb->showMessage("Error: Failed to erase SPI flash device", 5000);
+            emit sendDownloadFailStatus(QString("Error: Failed to erase SPI flash device"));
+            //sb->showMessage("Error: Failed to erase SPI flash device", 5000);
             free(fwBuf);
             return -4;
         }
@@ -119,8 +133,10 @@ int SPI_DOWNLOAD_THREAD::fx3_spiboot_download(const char *filename)
     r = spi_write(fwBuf, filesize);
     if (r != 0) {
         printf("SPI write failed\n");
+        emit sendDownloadFailStatus(QString("SPI Flash programming failed"));
     //	sb->showMessage("SPI Flash programming failed", 5000);
     } else {
+        emit sendDownloadFailStatus(QString("Completed writing into SPI FLASH"));
         //sb->showMessage("Completed writing into SPI FLASH", 5000);
     }
 
@@ -134,14 +150,10 @@ int SPI_DOWNLOAD_THREAD::get_fx3_prog_handle()
     cyusb_handle *handle;
     int i, j, r;
     struct stat filestat;
-
+#if 0
     r = check_fx3_flashprog(h);
     if ( r == 0 )
         //return 0;
-
-    printf("Failed to find FX3 flash programmer\n");
-    printf("Trying to download flash programmer to RAM\n");
-
     tmp = getenv("CYUSB_ROOT");
     if (tmp != NULL) {
         i = strlen(tmp);
@@ -159,9 +171,9 @@ int SPI_DOWNLOAD_THREAD::get_fx3_prog_handle()
         printf("Failed to find cyfxflashprog.img file\n");
         //return -1;
     }
-
+#endif
     r = fx3_usbboot_download( qPrintable(QString("/home/linux/app/cyfxflashprog.img")));
-    free (progfile_p);
+   // free (progfile_p);
     if ( r != 0 ) {
         printf("Failed to download flash prog utility\n");
         return -1;
@@ -276,7 +288,7 @@ int SPI_DOWNLOAD_THREAD::spi_write(unsigned char *buf, int len)
     int index = 0;
     int size;
     unsigned short page_address = 0;
-    printf("spi_write len = %d\n",len);
+
     while ( len > 0 ) {
         size = ( len > MAX_WRITE_SIZE ) ? MAX_WRITE_SIZE : len;
         r = cyusb_control_transfer(h, 0x40, 0xC2, 0, page_address, &buf[index], size, VENDORCMD_TIMEOUT);
@@ -309,3 +321,88 @@ int SPI_DOWNLOAD_THREAD::check_fx3_flashprog(cyusb_handle *handle)
     return 0;
 }
 
+int SPI_DOWNLOAD_THREAD::fx3_usbboot_download(const char *filename)
+{
+    unsigned char *fwBuf;
+    unsigned int  *data_p;
+    unsigned int i, checksum;
+    unsigned int address, length;
+    int r, index;
+
+    fwBuf = (unsigned char *)calloc (1, MAX_FWIMG_SIZE);
+    if ( fwBuf == 0 ) {
+        printf("Failed to allocate buffer to store firmware binary\n");
+        sb->showMessage("Error: Failed to get memory for download\n", 5000);
+        return -1;
+    }
+
+    // Read the firmware image into the local RAM buffer.
+    r = read_firmware_image(filename, fwBuf, NULL);
+    if ( r != 0 ) {
+        printf("Failed to read firmware file %s\n", filename);
+        sb->showMessage("Error: Failed to read firmware binary\n", 5000);
+        free(fwBuf);
+        return -2;
+    }
+
+    // Run through each section of code, and use vendor commands to download them to RAM.
+    index    = 4;
+    checksum = 0;
+    while ( index < filesize ) {
+
+        data_p  = (unsigned int *)(fwBuf + index);
+        length  = data_p[0];
+        address = data_p[1];
+        if (length != 0) {
+            for (i = 0; i < length; i++)
+                checksum += data_p[2 + i];
+            r = ram_write(fwBuf + index + 8, address, length * 4);
+            if (r != 0) {
+                printf("Failed to download data to FX3 RAM\n");
+                sb->showMessage("Error: Write to FX3 RAM failed", 5000);
+                free(fwBuf);
+                return -3;
+            }
+        } else {
+            if (checksum != data_p[2]) {
+                printf ("Checksum error in firmware binary\n");
+                sb->showMessage("Error: Firmware checksum error", 5000);
+                free(fwBuf);
+                return -4;
+            }
+
+            r = cyusb_control_transfer(h, 0x40, 0xA0, GET_LSW(address), GET_MSW(address), NULL,
+                    0, VENDORCMD_TIMEOUT);
+            if ( r != 0 )
+                printf("Ignored error in control transfer: %d\n", r);
+            break;
+        }
+
+        index += (8 + length * 4);
+    }
+
+    free(fwBuf);
+    return 0;
+}
+int SPI_DOWNLOAD_THREAD::ram_write(unsigned char *buf, unsigned int ramAddress, int len)
+{
+    int r;
+    int index = 0;
+    int size;
+
+    while ( len > 0 ) {
+        size = (len > MAX_WRITE_SIZE) ? MAX_WRITE_SIZE : len;
+        r = cyusb_control_transfer(h, 0x40, 0xA0, GET_LSW(ramAddress), GET_MSW(ramAddress),
+                &buf[index], size, VENDORCMD_TIMEOUT);
+        if ( r != size ) {
+            printf("Vendor write to FX3 RAM failed\n");
+            return -1;
+        }
+
+        ramAddress += size;
+        index      += size;
+        len        -= size;
+    }
+
+    return 0;
+}

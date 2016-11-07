@@ -97,6 +97,7 @@ private slots:
     void on_downloadButton_clicked();
     void receiveOtaThreadStatus(QString,int);
     void receiveSpiDownloadThreadStatus(QString status, int percent);
+    void receiveDownloadFailThreadStatus(QString);
 
     void on_resetToMode_clicked();
 

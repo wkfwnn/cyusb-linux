@@ -19,6 +19,9 @@ extern "C"{
 extern int reset2Down();
 }
 
+
+extern QStatusBar *sb;
+
 int sigusr1_fd[2];
 
 ControlCenter::ControlCenter(QWidget *parent) : QWidget(parent)
@@ -39,6 +42,7 @@ ControlCenter::ControlCenter(QWidget *parent) : QWidget(parent)
 
     connect(mThread,SIGNAL(sendStatus(QString,int)),this,SLOT(receiveOtaThreadStatus(QString,int)));
     connect(mSpi_download[0],SIGNAL(sendSpiDownloadStatus(QString,int)),this,SLOT(receiveSpiDownloadThreadStatus(QString,int)));
+    connect(mSpi_download[0],SIGNAL(sendDownloadFailStatus(QString)),this,SLOT(receiveDownloadFailThreadStatus(QString)));
     this->progressBar->hide();
     this->statusLabel->hide();
     this->rb4_spi->setChecked(true);
@@ -183,13 +187,21 @@ void ControlCenter::receiveOtaThreadStatus(QString msg, int returnValue)
 
 void ControlCenter::receiveSpiDownloadThreadStatus( QString status,int percent)
 {
+# if 0
     if(status == QString("Erased sector")){
         this->cx3_status_label->setText((QString("固件擦除中")));
     }
     if(status == QString("firmware download")){
         this->cx3_status_label->setText((QString("固件下载中")));
     }
-    this->cx3_firmware_process_bar->setValue(percent);
+#endif
+       this->cx3_status_label->setText(status);
+       this->cx3_firmware_process_bar->setValue(percent);
+}
+
+void ControlCenter::receiveDownloadFailThreadStatus(QString status)
+{
+    sb->showMessage(status,2000);
 }
 
 void ControlCenter::on_resetToMode_clicked()

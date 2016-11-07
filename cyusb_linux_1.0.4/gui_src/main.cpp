@@ -254,7 +254,26 @@ void ControlCenter::on_pb4_start_clicked()
         mb.exec();
     }
 #endif
+    if(this->all_download->isChecked()){
+        if(label4_file->text().isEmpty()){
+            QMessageBox::warning(this,QString("!Waring"),QString("please select firmware"));
+        }
+        if(isp_file_name->text().isEmpty()){
+            QMessageBox::warning(this,QString("!Warning"),QString("please select isp bin file"));
+            return;
+        }
+    }
+    if(this->only_download_flash->isChecked()){
+        if(label4_file->text().isEmpty()){
+            QMessageBox::warning(this,QString("!Warning"),QString("please select firmware"));
+             return;
+        }
+    }
+    this->cx3_status_label->setText(QString("Start download firmware"));
+    this->cx3_firmware_process_bar->setValue(0);
+    this->mSpi_download[0]->setIsDownloadIspFirmware(this->all_download->isChecked());
     this->mSpi_download[0]->setCx3FimwareName(mainwin->label4_file->text());
+    this->mSpi_download[0]->setIspFimwareName(mainwin->isp_file_name->text());
     this->mSpi_download[0]->start();
 }
 
