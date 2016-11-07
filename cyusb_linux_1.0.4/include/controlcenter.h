@@ -97,10 +97,13 @@ private slots:
     void on_downloadButton_clicked();
     void receiveOtaThreadStatus(QString,int);
     void receiveSpiDownloadThreadStatus(QString status, int percent);
+    void receiveDownloadFailThreadStatus(QString);
 
     void on_resetToMode_clicked();
 
     void on_isp_download_clicked();
+
+    int  cold_reset();
 
 private:
       Ota_Thread *mThread;

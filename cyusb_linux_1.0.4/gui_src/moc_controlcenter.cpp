@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'controlcenter.h'
 **
-** Created: Wed Aug 10 17:22:17 2016
+** Created: Mon Nov 7 18:15:05 2016
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_ControlCenter[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-      70,   14, // methods
+      75,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -39,68 +39,73 @@ static const uint qt_meta_data_ControlCenter[] = {
      158,   14,   14,   14, 0x0a,
      180,   14,   14,   14, 0x0a,
      190,   14,   14,   14, 0x0a,
-     198,   14,   14,   14, 0x08,
-     232,  227,   14,   14, 0x08,
-     276,   14,   14,   14, 0x08,
-     294,   14,   14,   14, 0x08,
-     319,   14,   14,   14, 0x08,
-     342,   14,   14,   14, 0x08,
-     363,   14,   14,   14, 0x08,
-     386,   14,   14,   14, 0x08,
-     409,   14,   14,   14, 0x08,
-     431,   14,   14,   14, 0x08,
-     454,   14,   14,   14, 0x08,
-     477,   14,   14,   14, 0x08,
-     499,   14,   14,   14, 0x08,
-     521,   14,   14,   14, 0x08,
-     546,   14,   14,   14, 0x08,
-     569,   14,   14,   14, 0x08,
-     593,   14,   14,   14, 0x08,
-     614,   14,   14,   14, 0x08,
-     634,   14,   14,   14, 0x08,
-     659,   14,   14,   14, 0x08,
-     682,   14,   14,   14, 0x08,
-     702,   14,   14,   14, 0x08,
-     730,   14,   14,   14, 0x08,
-     760,   14,   14,   14, 0x08,
-     791,   14,   14,   14, 0x08,
-     816,   14,   14,   14, 0x08,
-     839,   14,   14,   14, 0x08,
-     862,   14,   14,   14, 0x08,
-     890,   14,   14,   14, 0x08,
-     920,   14,   14,   14, 0x08,
-     951,   14,   14,   14, 0x08,
-     974,   14,   14,   14, 0x08,
-    1000,   14,   14,   14, 0x08,
-    1024,   14,   14,   14, 0x08,
-    1045,   14,   14,   14, 0x08,
-    1067,   14,   14,   14, 0x08,
-    1089,   14,   14,   14, 0x08,
-    1113,   14,   14,   14, 0x08,
-    1136,   14,   14,   14, 0x08,
-    1167,   14,   14,   14, 0x08,
-    1197,   14,   14,   14, 0x08,
-    1220,   14,   14,   14, 0x08,
-    1241,   14,   14,   14, 0x08,
-    1265,   14,   14,   14, 0x08,
-    1290,   14,   14,   14, 0x08,
-    1321,   14,   14,   14, 0x08,
-    1351,   14,   14,   14, 0x08,
-    1380,   14,   14,   14, 0x08,
-    1408,   14,   14,   14, 0x08,
-    1439,   14,   14,   14, 0x08,
-    1470,   14,   14,   14, 0x08,
-    1501,   14,   14,   14, 0x08,
-    1532,   14,   14,   14, 0x08,
-    1563,   14,   14,   14, 0x08,
-    1597,   14,   14,   14, 0x08,
-    1636, 1631,   14,   14, 0x08,
-    1674,   14,   14,   14, 0x08,
-    1701,   14,   14,   14, 0x08,
-    1734, 1728,   14,   14, 0x08,
-    1772,   14,   14,   14, 0x08,
-    1800,  113,   14,   14, 0x08,
-    1836,   14,   14,   14, 0x08,
+     203,  198,   14,   14, 0x0a,
+     217,   14,   14,   14, 0x08,
+     251,  246,   14,   14, 0x08,
+     295,   14,   14,   14, 0x08,
+     313,   14,   14,   14, 0x08,
+     338,   14,   14,   14, 0x08,
+     361,   14,   14,   14, 0x08,
+     382,   14,   14,   14, 0x08,
+     405,   14,   14,   14, 0x08,
+     428,   14,   14,   14, 0x08,
+     450,   14,   14,   14, 0x08,
+     473,   14,   14,   14, 0x08,
+     496,   14,   14,   14, 0x08,
+     518,   14,   14,   14, 0x08,
+     540,   14,   14,   14, 0x08,
+     565,   14,   14,   14, 0x08,
+     588,   14,   14,   14, 0x08,
+     612,   14,   14,   14, 0x08,
+     633,   14,   14,   14, 0x08,
+     653,   14,   14,   14, 0x08,
+     678,   14,   14,   14, 0x08,
+     701,   14,   14,   14, 0x08,
+     721,   14,   14,   14, 0x08,
+     749,   14,   14,   14, 0x08,
+     779,   14,   14,   14, 0x08,
+     810,   14,   14,   14, 0x08,
+     835,   14,   14,   14, 0x08,
+     858,   14,   14,   14, 0x08,
+     881,   14,   14,   14, 0x08,
+     909,   14,   14,   14, 0x08,
+     939,   14,   14,   14, 0x08,
+     970,   14,   14,   14, 0x08,
+     993,   14,   14,   14, 0x08,
+    1019,   14,   14,   14, 0x08,
+    1043,   14,   14,   14, 0x08,
+    1064,   14,   14,   14, 0x08,
+    1086,   14,   14,   14, 0x08,
+    1108,   14,   14,   14, 0x08,
+    1132,   14,   14,   14, 0x08,
+    1155,   14,   14,   14, 0x08,
+    1186,   14,   14,   14, 0x08,
+    1216,   14,   14,   14, 0x08,
+    1239,   14,   14,   14, 0x08,
+    1260,   14,   14,   14, 0x08,
+    1284,   14,   14,   14, 0x08,
+    1309,   14,   14,   14, 0x08,
+    1340,   14,   14,   14, 0x08,
+    1370,   14,   14,   14, 0x08,
+    1399,   14,   14,   14, 0x08,
+    1427,   14,   14,   14, 0x08,
+    1458,   14,   14,   14, 0x08,
+    1489,   14,   14,   14, 0x08,
+    1520,   14,   14,   14, 0x08,
+    1551,   14,   14,   14, 0x08,
+    1582,   14,   14,   14, 0x08,
+    1616,   14,   14,   14, 0x08,
+    1655, 1650,   14,   14, 0x08,
+    1693,   14,   14,   14, 0x08,
+    1720,   14,   14,   14, 0x08,
+    1753, 1747,   14,   14, 0x08,
+    1791,   14,   14,   14, 0x08,
+    1819,  113,   14,   14, 0x08,
+    1870, 1855,   14,   14, 0x08,
+    1914,   14,   14,   14, 0x08,
+    1955,   14,   14,   14, 0x08,
+    1980,   14,   14,   14, 0x08,
+    2010,   14, 2006,   14, 0x08,
 
        0        // eod
 };
@@ -111,8 +116,8 @@ static const char qt_meta_stringdata_ControlCenter[] = {
     "pb6_send_nofile_selected()\0,\0"
     "pb6_send_file_selected(unsigned char*,int)\0"
     "on_pb7_send_clicked()\0appExit()\0about()\0"
-    "on_pb_kerneldetach_clicked()\0item\0"
-    "on_listWidget_itemClicked(QListWidgetItem*)\0"
+    "msec\0delay_ms(int)\0on_pb_kerneldetach_clicked()\0"
+    "item\0on_listWidget_itemClicked(QListWidgetItem*)\0"
     "sigusr1_handler()\0on_pb1_selfile_clicked()\0"
     "on_pb1_start_clicked()\0on_rb1_ram_clicked()\0"
     "on_rb1_small_clicked()\0on_rb1_large_clicked()\0"
@@ -157,7 +162,12 @@ static const char qt_meta_stringdata_ControlCenter[] = {
     "on_horizontalSlider_valueChanged(int)\0"
     "on_downloadButton_clicked()\0"
     "receiveOtaThreadStatus(QString,int)\0"
+    "status,percent\0"
+    "receiveSpiDownloadThreadStatus(QString,int)\0"
+    "receiveDownloadFailThreadStatus(QString)\0"
     "on_resetToMode_clicked()\0"
+    "on_isp_download_clicked()\0int\0"
+    "cold_reset()\0"
 };
 
 void ControlCenter::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -174,68 +184,74 @@ void ControlCenter::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         case 5: _t->on_pb7_send_clicked(); break;
         case 6: _t->appExit(); break;
         case 7: _t->about(); break;
-        case 8: _t->on_pb_kerneldetach_clicked(); break;
-        case 9: _t->on_listWidget_itemClicked((*reinterpret_cast< QListWidgetItem*(*)>(_a[1]))); break;
-        case 10: _t->sigusr1_handler(); break;
-        case 11: _t->on_pb1_selfile_clicked(); break;
-        case 12: _t->on_pb1_start_clicked(); break;
-        case 13: _t->on_rb1_ram_clicked(); break;
-        case 14: _t->on_rb1_small_clicked(); break;
-        case 15: _t->on_rb1_large_clicked(); break;
-        case 16: _t->on_pb_reset_clicked(); break;
-        case 17: _t->on_rb3_ramdl_clicked(); break;
-        case 18: _t->on_rb3_ramup_clicked(); break;
-        case 19: _t->on_rb3_eedl_clicked(); break;
-        case 20: _t->on_rb3_eeup_clicked(); break;
-        case 21: _t->on_rb3_getchip_clicked(); break;
-        case 22: _t->on_rb3_renum_clicked(); break;
-        case 23: _t->on_rb3_custom_clicked(); break;
-        case 24: _t->on_rb3_out_clicked(); break;
-        case 25: _t->on_rb3_in_clicked(); break;
-        case 26: _t->on_pb3_selfile_clicked(); break;
-        case 27: _t->on_pb_execvc_clicked(); break;
-        case 28: _t->on_pb3_dl_clicked(); break;
-        case 29: _t->on_le3_out_hex_textEdited(); break;
-        case 30: _t->on_le3_out_ascii_textEdited(); break;
-        case 31: _t->on_le3_out_ascii_textChanged(); break;
-        case 32: _t->on_pb4_selfile_clicked(); break;
-        case 33: _t->on_pb4_start_clicked(); break;
-        case 34: _t->on_pb4_clear_clicked(); break;
-        case 35: _t->on_le6_out_hex_textEdited(); break;
-        case 36: _t->on_le6_out_ascii_textEdited(); break;
-        case 37: _t->on_le6_out_ascii_textChanged(); break;
-        case 38: _t->on_pb6_clear_clicked(); break;
-        case 39: _t->on_rb6_constant_clicked(); break;
-        case 40: _t->on_rb6_random_clicked(); break;
-        case 41: _t->on_rb6_inc_clicked(); break;
-        case 42: _t->on_pb6_send_clicked(); break;
-        case 43: _t->on_cb6_loop_clicked(); break;
-        case 44: _t->on_pb6_selout_clicked(); break;
-        case 45: _t->on_pb6_selin_clicked(); break;
-        case 46: _t->on_pb6_clearhalt_out_clicked(); break;
-        case 47: _t->on_pb6_clearhalt_in_clicked(); break;
-        case 48: _t->on_pb7_clear_clicked(); break;
-        case 49: _t->on_pb7_rcv_clicked(); break;
-        case 50: _t->on_rb7_enable_clicked(); break;
-        case 51: _t->on_rb7_disable_clicked(); break;
-        case 52: _t->on_pb7_clearhalt_out_clicked(); break;
-        case 53: _t->on_pb7_clearhalt_in_clicked(); break;
-        case 54: _t->on_screenOffButton_clicked(); break;
-        case 55: _t->on_screenOnButton_clicked(); break;
-        case 56: _t->on_cd_120RadioButton_clicked(); break;
-        case 57: _t->on_cd_200RadioButton_clicked(); break;
-        case 58: _t->on_cd_300RadioButton_clicked(); break;
-        case 59: _t->on_cd_500RadioButton_clicked(); break;
-        case 60: _t->on_cd_800RadioButton_clicked(); break;
-        case 61: _t->on_enbaleManRadioButton_clicked(); break;
-        case 62: _t->on_fileNameSelectButton_clicked(); break;
-        case 63: _t->on_setLumLineEdit_textEdited((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-        case 64: _t->on_getPushButton_clicked(); break;
-        case 65: _t->on_setPushButton_clicked(); break;
-        case 66: _t->on_horizontalSlider_valueChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 67: _t->on_downloadButton_clicked(); break;
-        case 68: _t->receiveOtaThreadStatus((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
-        case 69: _t->on_resetToMode_clicked(); break;
+        case 8: _t->delay_ms((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 9: _t->on_pb_kerneldetach_clicked(); break;
+        case 10: _t->on_listWidget_itemClicked((*reinterpret_cast< QListWidgetItem*(*)>(_a[1]))); break;
+        case 11: _t->sigusr1_handler(); break;
+        case 12: _t->on_pb1_selfile_clicked(); break;
+        case 13: _t->on_pb1_start_clicked(); break;
+        case 14: _t->on_rb1_ram_clicked(); break;
+        case 15: _t->on_rb1_small_clicked(); break;
+        case 16: _t->on_rb1_large_clicked(); break;
+        case 17: _t->on_pb_reset_clicked(); break;
+        case 18: _t->on_rb3_ramdl_clicked(); break;
+        case 19: _t->on_rb3_ramup_clicked(); break;
+        case 20: _t->on_rb3_eedl_clicked(); break;
+        case 21: _t->on_rb3_eeup_clicked(); break;
+        case 22: _t->on_rb3_getchip_clicked(); break;
+        case 23: _t->on_rb3_renum_clicked(); break;
+        case 24: _t->on_rb3_custom_clicked(); break;
+        case 25: _t->on_rb3_out_clicked(); break;
+        case 26: _t->on_rb3_in_clicked(); break;
+        case 27: _t->on_pb3_selfile_clicked(); break;
+        case 28: _t->on_pb_execvc_clicked(); break;
+        case 29: _t->on_pb3_dl_clicked(); break;
+        case 30: _t->on_le3_out_hex_textEdited(); break;
+        case 31: _t->on_le3_out_ascii_textEdited(); break;
+        case 32: _t->on_le3_out_ascii_textChanged(); break;
+        case 33: _t->on_pb4_selfile_clicked(); break;
+        case 34: _t->on_pb4_start_clicked(); break;
+        case 35: _t->on_pb4_clear_clicked(); break;
+        case 36: _t->on_le6_out_hex_textEdited(); break;
+        case 37: _t->on_le6_out_ascii_textEdited(); break;
+        case 38: _t->on_le6_out_ascii_textChanged(); break;
+        case 39: _t->on_pb6_clear_clicked(); break;
+        case 40: _t->on_rb6_constant_clicked(); break;
+        case 41: _t->on_rb6_random_clicked(); break;
+        case 42: _t->on_rb6_inc_clicked(); break;
+        case 43: _t->on_pb6_send_clicked(); break;
+        case 44: _t->on_cb6_loop_clicked(); break;
+        case 45: _t->on_pb6_selout_clicked(); break;
+        case 46: _t->on_pb6_selin_clicked(); break;
+        case 47: _t->on_pb6_clearhalt_out_clicked(); break;
+        case 48: _t->on_pb6_clearhalt_in_clicked(); break;
+        case 49: _t->on_pb7_clear_clicked(); break;
+        case 50: _t->on_pb7_rcv_clicked(); break;
+        case 51: _t->on_rb7_enable_clicked(); break;
+        case 52: _t->on_rb7_disable_clicked(); break;
+        case 53: _t->on_pb7_clearhalt_out_clicked(); break;
+        case 54: _t->on_pb7_clearhalt_in_clicked(); break;
+        case 55: _t->on_screenOffButton_clicked(); break;
+        case 56: _t->on_screenOnButton_clicked(); break;
+        case 57: _t->on_cd_120RadioButton_clicked(); break;
+        case 58: _t->on_cd_200RadioButton_clicked(); break;
+        case 59: _t->on_cd_300RadioButton_clicked(); break;
+        case 60: _t->on_cd_500RadioButton_clicked(); break;
+        case 61: _t->on_cd_800RadioButton_clicked(); break;
+        case 62: _t->on_enbaleManRadioButton_clicked(); break;
+        case 63: _t->on_fileNameSelectButton_clicked(); break;
+        case 64: _t->on_setLumLineEdit_textEdited((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 65: _t->on_getPushButton_clicked(); break;
+        case 66: _t->on_setPushButton_clicked(); break;
+        case 67: _t->on_horizontalSlider_valueChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 68: _t->on_downloadButton_clicked(); break;
+        case 69: _t->receiveOtaThreadStatus((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
+        case 70: _t->receiveSpiDownloadThreadStatus((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
+        case 71: _t->receiveDownloadFailThreadStatus((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 72: _t->on_resetToMode_clicked(); break;
+        case 73: _t->on_isp_download_clicked(); break;
+        case 74: { int _r = _t->cold_reset();
+            if (_a[0]) *reinterpret_cast< int*>(_a[0]) = _r; }  break;
         default: ;
         }
     }
@@ -275,9 +291,9 @@ int ControlCenter::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 70)
+        if (_id < 75)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 70;
+        _id -= 75;
     }
     return _id;
 }
