@@ -271,6 +271,8 @@ void ControlCenter::on_pb4_start_clicked()
     }
     this->cx3_status_label->setText(QString("Start download firmware"));
     this->cx3_firmware_process_bar->setValue(0);
+    this->isp_download_proces_bar->setValue(0);
+    this->isp_status_label->setText(QString("isp bin file download"));
     this->mSpi_download[0]->setIsDownloadIspFirmware(this->all_download->isChecked());
     this->mSpi_download[0]->setCx3FimwareName(mainwin->label4_file->text());
     this->mSpi_download[0]->setIspFimwareName(mainwin->isp_file_name->text());
@@ -293,6 +295,14 @@ void ControlCenter::on_isp_download_clicked()
         mainwin->pb4_start->setEnabled(TRUE);
     }
 
+}
+
+int ControlCenter::cold_reset()
+{
+    int r = 0;
+    r = cyusb_control_transfer(h, 0x40, 0xE0,0,0, NULL,
+            0, VENDORCMD_TIMEOUT);
+    return r;
 }
 
 void ControlCenter::on_pb4_clear_clicked()
@@ -862,8 +872,11 @@ void ControlCenter::on_pb_reset_clicked()
     QMessageBox mb;
 	mb.setText("Device reset");
 	mb.exec();
+
+    r = cyusb_control_transfer(h, 0x40, 0xE0,0,0, NULL,
+            0, VENDORCMD_TIMEOUT);
 #endif
- //   reset_device();
+   // reset_device();
 }
 
 void ControlCenter::on_rb3_ramdl_clicked()

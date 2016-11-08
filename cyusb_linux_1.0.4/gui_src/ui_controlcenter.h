@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'controlcenter.ui'
 **
-** Created: Wed Aug 10 17:22:02 2016
+** Created: Mon Nov 7 16:12:32 2016
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -58,8 +58,6 @@ public:
     QRadioButton *rb_external;
     QWidget *tab_5;
     QListWidget *lw4_display;
-    QPushButton *pb4_selfile;
-    QPushButton *pb4_start;
     QPushButton *pb4_clear;
     QGroupBox *groupBox_5;
     QRadioButton *rb4_ram;
@@ -67,25 +65,35 @@ public:
     QRadioButton *rb4_spi;
     QLabel *label_39;
     QLabel *label4_file;
+    QLabel *label_44;
+    QLabel *isp_file_name;
+    QWidget *layoutWidget;
+    QGridLayout *gridLayout_2;
+    QPushButton *pb4_selfile;
+    QPushButton *isp_download;
+    QPushButton *pb4_start;
+    QGroupBox *groupBox_12;
+    QRadioButton *only_download_flash;
+    QRadioButton *all_download;
     QWidget *tab_10;
     QProgressBar *progressBar;
     QLabel *statusLabel;
     QLabel *label_43;
-    QWidget *layoutWidget;
+    QWidget *layoutWidget1;
     QHBoxLayout *horizontalLayout_2;
     QLabel *label_42;
     QPushButton *fileNameSelectButton;
     QPushButton *downloadButton;
     QWidget *tab_9;
-    QWidget *layoutWidget1;
+    QWidget *layoutWidget2;
     QHBoxLayout *horizontalLayout;
     QGroupBox *groupBox_9;
-    QWidget *layoutWidget2;
+    QWidget *layoutWidget3;
     QVBoxLayout *verticalLayout;
     QPushButton *screenOffButton;
     QPushButton *screenOnButton;
     QGroupBox *groupBox_10;
-    QWidget *layoutWidget3;
+    QWidget *layoutWidget4;
     QGridLayout *gridLayout;
     QLabel *label_33;
     QLineEdit *curLumLineEdit;
@@ -96,7 +104,7 @@ public:
     QLabel *label_40;
     QLineEdit *setLumLineEdit;
     QSlider *horizontalSlider;
-    QWidget *layoutWidget4;
+    QWidget *layoutWidget5;
     QHBoxLayout *horizontalLayout_3;
     QPushButton *getPushButton;
     QPushButton *setPushButton;
@@ -257,6 +265,10 @@ public:
     QLabel *label_20;
     QLabel *label_devtype;
     QPushButton *resetToMode;
+    QProgressBar *cx3_firmware_process_bar;
+    QProgressBar *isp_download_proces_bar;
+    QLabel *isp_status_label;
+    QLabel *cx3_status_label;
 
     void setupUi(QWidget *ControlCenter)
     {
@@ -284,7 +296,7 @@ public:
         tab1 = new QTabWidget(ControlCenter);
         tab1->setObjectName(QString::fromUtf8("tab1"));
         tab1->setEnabled(true);
-        tab1->setGeometry(QRect(-10, 170, 871, 476));
+        tab1->setGeometry(QRect(-10, 170, 871, 401));
         tab1->setTabShape(QTabWidget::Rounded);
         tab_3 = new QWidget();
         tab_3->setObjectName(QString::fromUtf8("tab_3"));
@@ -341,20 +353,14 @@ public:
         tab_5->setObjectName(QString::fromUtf8("tab_5"));
         lw4_display = new QListWidget(tab_5);
         lw4_display->setObjectName(QString::fromUtf8("lw4_display"));
-        lw4_display->setGeometry(QRect(220, 90, 611, 201));
+        lw4_display->setGeometry(QRect(220, 120, 611, 201));
         lw4_display->setFont(font1);
-        pb4_selfile = new QPushButton(tab_5);
-        pb4_selfile->setObjectName(QString::fromUtf8("pb4_selfile"));
-        pb4_selfile->setGeometry(QRect(90, 190, 121, 27));
-        pb4_start = new QPushButton(tab_5);
-        pb4_start->setObjectName(QString::fromUtf8("pb4_start"));
-        pb4_start->setGeometry(QRect(90, 230, 121, 27));
         pb4_clear = new QPushButton(tab_5);
         pb4_clear->setObjectName(QString::fromUtf8("pb4_clear"));
-        pb4_clear->setGeometry(QRect(170, 260, 41, 27));
+        pb4_clear->setGeometry(QRect(180, 290, 41, 27));
         groupBox_5 = new QGroupBox(tab_5);
         groupBox_5->setObjectName(QString::fromUtf8("groupBox_5"));
-        groupBox_5->setGeometry(QRect(10, 10, 191, 101));
+        groupBox_5->setGeometry(QRect(10, 80, 161, 101));
         rb4_ram = new QRadioButton(groupBox_5);
         rb4_ram->setObjectName(QString::fromUtf8("rb4_ram"));
         rb4_ram->setGeometry(QRect(11, 21, 177, 19));
@@ -366,11 +372,48 @@ public:
         rb4_spi->setGeometry(QRect(11, 71, 177, 19));
         label_39 = new QLabel(tab_5);
         label_39->setObjectName(QString::fromUtf8("label_39"));
-        label_39->setGeometry(QRect(200, 30, 121, 20));
+        label_39->setGeometry(QRect(200, 30, 101, 20));
         label4_file = new QLabel(tab_5);
         label4_file->setObjectName(QString::fromUtf8("label4_file"));
         label4_file->setGeometry(QRect(330, 20, 511, 31));
         label4_file->setFrameShape(QFrame::Box);
+        label_44 = new QLabel(tab_5);
+        label_44->setObjectName(QString::fromUtf8("label_44"));
+        label_44->setGeometry(QRect(200, 60, 101, 20));
+        isp_file_name = new QLabel(tab_5);
+        isp_file_name->setObjectName(QString::fromUtf8("isp_file_name"));
+        isp_file_name->setGeometry(QRect(330, 60, 511, 31));
+        isp_file_name->setFrameShape(QFrame::Box);
+        layoutWidget = new QWidget(tab_5);
+        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
+        layoutWidget->setGeometry(QRect(90, 190, 131, 98));
+        gridLayout_2 = new QGridLayout(layoutWidget);
+        gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
+        gridLayout_2->setContentsMargins(0, 0, 0, 0);
+        pb4_selfile = new QPushButton(layoutWidget);
+        pb4_selfile->setObjectName(QString::fromUtf8("pb4_selfile"));
+
+        gridLayout_2->addWidget(pb4_selfile, 0, 0, 1, 1);
+
+        isp_download = new QPushButton(layoutWidget);
+        isp_download->setObjectName(QString::fromUtf8("isp_download"));
+
+        gridLayout_2->addWidget(isp_download, 1, 0, 1, 1);
+
+        pb4_start = new QPushButton(layoutWidget);
+        pb4_start->setObjectName(QString::fromUtf8("pb4_start"));
+
+        gridLayout_2->addWidget(pb4_start, 2, 0, 1, 1);
+
+        groupBox_12 = new QGroupBox(tab_5);
+        groupBox_12->setObjectName(QString::fromUtf8("groupBox_12"));
+        groupBox_12->setGeometry(QRect(10, 10, 161, 61));
+        only_download_flash = new QRadioButton(groupBox_12);
+        only_download_flash->setObjectName(QString::fromUtf8("only_download_flash"));
+        only_download_flash->setGeometry(QRect(10, 10, 151, 22));
+        all_download = new QRadioButton(groupBox_12);
+        all_download->setObjectName(QString::fromUtf8("all_download"));
+        all_download->setGeometry(QRect(10, 30, 121, 22));
         tab2->addTab(tab_5, QString());
         tab1->addTab(tab_3, QString());
         tab_10 = new QWidget();
@@ -385,18 +428,18 @@ public:
         label_43 = new QLabel(tab_10);
         label_43->setObjectName(QString::fromUtf8("label_43"));
         label_43->setGeometry(QRect(434, 41, 205, 28));
-        layoutWidget = new QWidget(tab_10);
-        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(11, 41, 761, 30));
-        horizontalLayout_2 = new QHBoxLayout(layoutWidget);
+        layoutWidget1 = new QWidget(tab_10);
+        layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
+        layoutWidget1->setGeometry(QRect(11, 41, 761, 30));
+        horizontalLayout_2 = new QHBoxLayout(layoutWidget1);
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
         horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
-        label_42 = new QLabel(layoutWidget);
+        label_42 = new QLabel(layoutWidget1);
         label_42->setObjectName(QString::fromUtf8("label_42"));
 
         horizontalLayout_2->addWidget(label_42);
 
-        fileNameSelectButton = new QPushButton(layoutWidget);
+        fileNameSelectButton = new QPushButton(layoutWidget1);
         fileNameSelectButton->setObjectName(QString::fromUtf8("fileNameSelectButton"));
         QSizePolicy sizePolicy1(QSizePolicy::Expanding, QSizePolicy::Fixed);
         sizePolicy1.setHorizontalStretch(0);
@@ -406,32 +449,27 @@ public:
 
         horizontalLayout_2->addWidget(fileNameSelectButton);
 
-        downloadButton = new QPushButton(layoutWidget);
+        downloadButton = new QPushButton(tab_10);
         downloadButton->setObjectName(QString::fromUtf8("downloadButton"));
-        QFont font2;
-        font2.setPointSize(11);
-        downloadButton->setFont(font2);
-
-        horizontalLayout_2->addWidget(downloadButton);
-
+        downloadButton->setGeometry(QRect(770, 40, 97, 27));
         tab1->addTab(tab_10, QString());
         tab_9 = new QWidget();
         tab_9->setObjectName(QString::fromUtf8("tab_9"));
-        layoutWidget1 = new QWidget(tab_9);
-        layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
-        layoutWidget1->setGeometry(QRect(0, 10, 861, 431));
-        horizontalLayout = new QHBoxLayout(layoutWidget1);
+        layoutWidget2 = new QWidget(tab_9);
+        layoutWidget2->setObjectName(QString::fromUtf8("layoutWidget2"));
+        layoutWidget2->setGeometry(QRect(0, 10, 861, 431));
+        horizontalLayout = new QHBoxLayout(layoutWidget2);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        groupBox_9 = new QGroupBox(layoutWidget1);
+        groupBox_9 = new QGroupBox(layoutWidget2);
         groupBox_9->setObjectName(QString::fromUtf8("groupBox_9"));
-        layoutWidget2 = new QWidget(groupBox_9);
-        layoutWidget2->setObjectName(QString::fromUtf8("layoutWidget2"));
-        layoutWidget2->setGeometry(QRect(40, 90, 181, 261));
-        verticalLayout = new QVBoxLayout(layoutWidget2);
+        layoutWidget3 = new QWidget(groupBox_9);
+        layoutWidget3->setObjectName(QString::fromUtf8("layoutWidget3"));
+        layoutWidget3->setGeometry(QRect(40, 90, 181, 261));
+        verticalLayout = new QVBoxLayout(layoutWidget3);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
-        screenOffButton = new QPushButton(layoutWidget2);
+        screenOffButton = new QPushButton(layoutWidget3);
         screenOffButton->setObjectName(QString::fromUtf8("screenOffButton"));
         QSizePolicy sizePolicy2(QSizePolicy::Minimum, QSizePolicy::Preferred);
         sizePolicy2.setHorizontalStretch(0);
@@ -441,7 +479,7 @@ public:
 
         verticalLayout->addWidget(screenOffButton);
 
-        screenOnButton = new QPushButton(layoutWidget2);
+        screenOnButton = new QPushButton(layoutWidget3);
         screenOnButton->setObjectName(QString::fromUtf8("screenOnButton"));
         sizePolicy2.setHeightForWidth(screenOnButton->sizePolicy().hasHeightForWidth());
         screenOnButton->setSizePolicy(sizePolicy2);
@@ -451,58 +489,58 @@ public:
 
         horizontalLayout->addWidget(groupBox_9);
 
-        groupBox_10 = new QGroupBox(layoutWidget1);
+        groupBox_10 = new QGroupBox(layoutWidget2);
         groupBox_10->setObjectName(QString::fromUtf8("groupBox_10"));
-        layoutWidget3 = new QWidget(groupBox_10);
-        layoutWidget3->setObjectName(QString::fromUtf8("layoutWidget3"));
-        layoutWidget3->setGeometry(QRect(0, 90, 271, 221));
-        gridLayout = new QGridLayout(layoutWidget3);
+        layoutWidget4 = new QWidget(groupBox_10);
+        layoutWidget4->setObjectName(QString::fromUtf8("layoutWidget4"));
+        layoutWidget4->setGeometry(QRect(0, 90, 271, 221));
+        gridLayout = new QGridLayout(layoutWidget4);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         gridLayout->setContentsMargins(0, 0, 0, 0);
-        label_33 = new QLabel(layoutWidget3);
+        label_33 = new QLabel(layoutWidget4);
         label_33->setObjectName(QString::fromUtf8("label_33"));
 
         gridLayout->addWidget(label_33, 0, 0, 1, 1);
 
-        curLumLineEdit = new QLineEdit(layoutWidget3);
+        curLumLineEdit = new QLineEdit(layoutWidget4);
         curLumLineEdit->setObjectName(QString::fromUtf8("curLumLineEdit"));
         curLumLineEdit->setReadOnly(true);
 
         gridLayout->addWidget(curLumLineEdit, 0, 1, 1, 1);
 
-        label_34 = new QLabel(layoutWidget3);
+        label_34 = new QLabel(layoutWidget4);
         label_34->setObjectName(QString::fromUtf8("label_34"));
 
         gridLayout->addWidget(label_34, 1, 0, 1, 1);
 
-        minLumLineEdit = new QLineEdit(layoutWidget3);
+        minLumLineEdit = new QLineEdit(layoutWidget4);
         minLumLineEdit->setObjectName(QString::fromUtf8("minLumLineEdit"));
         minLumLineEdit->setReadOnly(true);
 
         gridLayout->addWidget(minLumLineEdit, 1, 1, 1, 1);
 
-        label_38 = new QLabel(layoutWidget3);
+        label_38 = new QLabel(layoutWidget4);
         label_38->setObjectName(QString::fromUtf8("label_38"));
 
         gridLayout->addWidget(label_38, 2, 0, 1, 1);
 
-        maxLumLineEdit = new QLineEdit(layoutWidget3);
+        maxLumLineEdit = new QLineEdit(layoutWidget4);
         maxLumLineEdit->setObjectName(QString::fromUtf8("maxLumLineEdit"));
         maxLumLineEdit->setReadOnly(true);
 
         gridLayout->addWidget(maxLumLineEdit, 2, 1, 1, 1);
 
-        label_40 = new QLabel(layoutWidget3);
+        label_40 = new QLabel(layoutWidget4);
         label_40->setObjectName(QString::fromUtf8("label_40"));
 
         gridLayout->addWidget(label_40, 3, 0, 1, 1);
 
-        setLumLineEdit = new QLineEdit(layoutWidget3);
+        setLumLineEdit = new QLineEdit(layoutWidget4);
         setLumLineEdit->setObjectName(QString::fromUtf8("setLumLineEdit"));
 
         gridLayout->addWidget(setLumLineEdit, 3, 1, 1, 1);
 
-        horizontalSlider = new QSlider(layoutWidget3);
+        horizontalSlider = new QSlider(layoutWidget4);
         horizontalSlider->setObjectName(QString::fromUtf8("horizontalSlider"));
         horizontalSlider->setMinimum(1);
         horizontalSlider->setMaximum(255);
@@ -510,18 +548,18 @@ public:
 
         gridLayout->addWidget(horizontalSlider, 4, 0, 1, 2);
 
-        layoutWidget4 = new QWidget(groupBox_10);
-        layoutWidget4->setObjectName(QString::fromUtf8("layoutWidget4"));
-        layoutWidget4->setGeometry(QRect(0, 320, 271, 30));
-        horizontalLayout_3 = new QHBoxLayout(layoutWidget4);
+        layoutWidget5 = new QWidget(groupBox_10);
+        layoutWidget5->setObjectName(QString::fromUtf8("layoutWidget5"));
+        layoutWidget5->setGeometry(QRect(0, 320, 271, 30));
+        horizontalLayout_3 = new QHBoxLayout(layoutWidget5);
         horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
         horizontalLayout_3->setContentsMargins(0, 0, 0, 0);
-        getPushButton = new QPushButton(layoutWidget4);
+        getPushButton = new QPushButton(layoutWidget5);
         getPushButton->setObjectName(QString::fromUtf8("getPushButton"));
 
         horizontalLayout_3->addWidget(getPushButton);
 
-        setPushButton = new QPushButton(layoutWidget4);
+        setPushButton = new QPushButton(layoutWidget5);
         setPushButton->setObjectName(QString::fromUtf8("setPushButton"));
 
         horizontalLayout_3->addWidget(setPushButton);
@@ -529,7 +567,7 @@ public:
 
         horizontalLayout->addWidget(groupBox_10);
 
-        groupBox_11 = new QGroupBox(layoutWidget1);
+        groupBox_11 = new QGroupBox(layoutWidget2);
         groupBox_11->setObjectName(QString::fromUtf8("groupBox_11"));
         cd_120RadioButton = new QRadioButton(groupBox_11);
         cd_120RadioButton->setObjectName(QString::fromUtf8("cd_120RadioButton"));
@@ -674,9 +712,9 @@ public:
         label_11 = new QLabel(tab_6);
         label_11->setObjectName(QString::fromUtf8("label_11"));
         label_11->setGeometry(QRect(190, 30, 91, 16));
-        QFont font3;
-        font3.setPointSize(9);
-        label_11->setFont(font3);
+        QFont font2;
+        font2.setPointSize(9);
+        label_11->setFont(font2);
         label_12 = new QLabel(tab_6);
         label_12->setObjectName(QString::fromUtf8("label_12"));
         label_12->setGeometry(QRect(387, 31, 68, 16));
@@ -714,25 +752,25 @@ public:
         label_15 = new QLabel(tab_6);
         label_15->setObjectName(QString::fromUtf8("label_15"));
         label_15->setGeometry(QRect(290, 10, 81, 16));
-        QFont font4;
-        font4.setPointSize(8);
-        label_15->setFont(font4);
+        QFont font3;
+        font3.setPointSize(8);
+        label_15->setFont(font3);
         label_16 = new QLabel(tab_6);
         label_16->setObjectName(QString::fromUtf8("label_16"));
         label_16->setGeometry(QRect(190, 10, 81, 16));
-        label_16->setFont(font4);
+        label_16->setFont(font3);
         label_17 = new QLabel(tab_6);
         label_17->setObjectName(QString::fromUtf8("label_17"));
         label_17->setGeometry(QRect(380, 10, 91, 16));
-        label_17->setFont(font4);
+        label_17->setFont(font3);
         label_18 = new QLabel(tab_6);
         label_18->setObjectName(QString::fromUtf8("label_18"));
         label_18->setGeometry(QRect(470, 10, 91, 16));
-        label_18->setFont(font4);
+        label_18->setFont(font3);
         label_19 = new QLabel(tab_6);
         label_19->setObjectName(QString::fromUtf8("label_19"));
         label_19->setGeometry(QRect(570, 10, 91, 16));
-        label_19->setFont(font4);
+        label_19->setFont(font3);
         le3_out_hex = new QLineEdit(tab_6);
         le3_out_hex->setObjectName(QString::fromUtf8("le3_out_hex"));
         le3_out_hex->setGeometry(QRect(350, 170, 431, 25));
@@ -740,7 +778,9 @@ public:
         pb_execvc = new QPushButton(tab_6);
         pb_execvc->setObjectName(QString::fromUtf8("pb_execvc"));
         pb_execvc->setGeometry(QRect(700, 50, 141, 41));
-        pb_execvc->setFont(font2);
+        QFont font4;
+        font4.setPointSize(11);
+        pb_execvc->setFont(font4);
         pb3_selfile = new QPushButton(tab_6);
         pb3_selfile->setObjectName(QString::fromUtf8("pb3_selfile"));
         pb3_selfile->setGeometry(QRect(290, 110, 51, 27));
@@ -858,7 +898,7 @@ public:
         label_24 = new QLabel(tab_7);
         label_24->setObjectName(QString::fromUtf8("label_24"));
         label_24->setGeometry(QRect(20, 210, 91, 16));
-        label_24->setFont(font4);
+        label_24->setFont(font3);
         le6_out_ascii = new QLineEdit(tab_7);
         le6_out_ascii->setObjectName(QString::fromUtf8("le6_out_ascii"));
         le6_out_ascii->setGeometry(QRect(180, 170, 431, 25));
@@ -894,15 +934,15 @@ public:
         label_75 = new QLabel(tab_7);
         label_75->setObjectName(QString::fromUtf8("label_75"));
         label_75->setGeometry(QRect(750, 210, 41, 16));
-        label_75->setFont(font4);
+        label_75->setFont(font3);
         pb6_clearhalt_out = new QPushButton(tab_7);
         pb6_clearhalt_out->setObjectName(QString::fromUtf8("pb6_clearhalt_out"));
         pb6_clearhalt_out->setGeometry(QRect(50, 60, 61, 21));
-        pb6_clearhalt_out->setFont(font4);
+        pb6_clearhalt_out->setFont(font3);
         pb6_clearhalt_in = new QPushButton(tab_7);
         pb6_clearhalt_in->setObjectName(QString::fromUtf8("pb6_clearhalt_in"));
         pb6_clearhalt_in->setGeometry(QRect(240, 60, 61, 21));
-        pb6_clearhalt_in->setFont(font4);
+        pb6_clearhalt_in->setFont(font3);
         tabWidget->addTab(tab_7, QString());
         tab_8 = new QWidget();
         tab_8->setObjectName(QString::fromUtf8("tab_8"));
@@ -976,7 +1016,7 @@ public:
         label_70 = new QLabel(groupBox_16);
         label_70->setObjectName(QString::fromUtf8("label_70"));
         label_70->setGeometry(QRect(15, 35, 81, 20));
-        label_70->setFont(font3);
+        label_70->setFont(font2);
         line_2 = new QFrame(groupBox_16);
         line_2->setObjectName(QString::fromUtf8("line_2"));
         line_2->setGeometry(QRect(15, 55, 281, 16));
@@ -1027,11 +1067,11 @@ public:
         label_66 = new QLabel(tab_8);
         label_66->setObjectName(QString::fromUtf8("label_66"));
         label_66->setGeometry(QRect(20, 210, 101, 16));
-        label_66->setFont(font4);
+        label_66->setFont(font3);
         label_76 = new QLabel(tab_8);
         label_76->setObjectName(QString::fromUtf8("label_76"));
         label_76->setGeometry(QRect(440, 210, 91, 16));
-        label_76->setFont(font4);
+        label_76->setFont(font3);
         label_77 = new QLabel(tab_8);
         label_77->setObjectName(QString::fromUtf8("label_77"));
         label_77->setGeometry(QRect(280, 30, 71, 16));
@@ -1051,11 +1091,11 @@ public:
         pb7_clearhalt_in = new QPushButton(tab_8);
         pb7_clearhalt_in->setObjectName(QString::fromUtf8("pb7_clearhalt_in"));
         pb7_clearhalt_in->setGeometry(QRect(155, 80, 61, 21));
-        pb7_clearhalt_in->setFont(font4);
+        pb7_clearhalt_in->setFont(font3);
         pb7_clearhalt_out = new QPushButton(tab_8);
         pb7_clearhalt_out->setObjectName(QString::fromUtf8("pb7_clearhalt_out"));
         pb7_clearhalt_out->setGeometry(QRect(60, 80, 61, 21));
-        pb7_clearhalt_out->setFont(font4);
+        pb7_clearhalt_out->setFont(font3);
         tabWidget->addTab(tab_8, QString());
         tab1->addTab(tab_2, QString());
         label_2 = new QLabel(ControlCenter);
@@ -1098,6 +1138,20 @@ public:
         resetToMode = new QPushButton(ControlCenter);
         resetToMode->setObjectName(QString::fromUtf8("resetToMode"));
         resetToMode->setGeometry(QRect(700, 60, 171, 27));
+        cx3_firmware_process_bar = new QProgressBar(ControlCenter);
+        cx3_firmware_process_bar->setObjectName(QString::fromUtf8("cx3_firmware_process_bar"));
+        cx3_firmware_process_bar->setGeometry(QRect(0, 580, 671, 23));
+        cx3_firmware_process_bar->setValue(24);
+        isp_download_proces_bar = new QProgressBar(ControlCenter);
+        isp_download_proces_bar->setObjectName(QString::fromUtf8("isp_download_proces_bar"));
+        isp_download_proces_bar->setGeometry(QRect(0, 610, 671, 23));
+        isp_download_proces_bar->setValue(24);
+        isp_status_label = new QLabel(ControlCenter);
+        isp_status_label->setObjectName(QString::fromUtf8("isp_status_label"));
+        isp_status_label->setGeometry(QRect(690, 610, 181, 17));
+        cx3_status_label = new QLabel(ControlCenter);
+        cx3_status_label->setObjectName(QString::fromUtf8("cx3_status_label"));
+        cx3_status_label->setGeometry(QRect(690, 580, 181, 20));
         QWidget::setTabOrder(rb3_custom, rb3_out);
         QWidget::setTabOrder(rb3_out, rb3_in);
         QWidget::setTabOrder(rb3_in, le3_bm);
@@ -1178,7 +1232,7 @@ public:
         QObject::connect(rb3_eedl, SIGNAL(clicked()), rb3_out, SLOT(click()));
         QObject::connect(pb3, SIGNAL(clicked()), le3_out_ascii, SLOT(clear()));
 
-        tab1->setCurrentIndex(2);
+        tab1->setCurrentIndex(0);
         tab2->setCurrentIndex(1);
         tabWidget->setCurrentIndex(0);
 
@@ -1203,8 +1257,6 @@ public:
         rb_internal->setText(QApplication::translate("ControlCenter", "Internal", 0, QApplication::UnicodeUTF8));
         rb_external->setText(QApplication::translate("ControlCenter", "External", 0, QApplication::UnicodeUTF8));
         tab2->setTabText(tab2->indexOf(tab_4), QApplication::translate("ControlCenter", "FX2", 0, QApplication::UnicodeUTF8));
-        pb4_selfile->setText(QApplication::translate("ControlCenter", "\351\200\211\346\213\251 Flash \346\226\207\344\273\266", 0, QApplication::UnicodeUTF8));
-        pb4_start->setText(QApplication::translate("ControlCenter", "\345\274\200\345\247\213\344\270\213\350\275\275", 0, QApplication::UnicodeUTF8));
         pb4_clear->setText(QApplication::translate("ControlCenter", "\346\270\205\351\231\244", 0, QApplication::UnicodeUTF8));
         groupBox_5->setTitle(QApplication::translate("ControlCenter", "\344\270\213\350\275\275\345\210\260->", 0, QApplication::UnicodeUTF8));
         rb4_ram->setText(QApplication::translate("ControlCenter", "RAM", 0, QApplication::UnicodeUTF8));
@@ -1212,6 +1264,14 @@ public:
         rb4_spi->setText(QApplication::translate("ControlCenter", "SPI Flash", 0, QApplication::UnicodeUTF8));
         label_39->setText(QApplication::translate("ControlCenter", "\351\200\211\346\213\251flash\346\226\207\344\273\266", 0, QApplication::UnicodeUTF8));
         label4_file->setText(QString());
+        label_44->setText(QApplication::translate("ControlCenter", "\351\200\211\346\213\251isp \346\226\207\344\273\266", 0, QApplication::UnicodeUTF8));
+        isp_file_name->setText(QString());
+        pb4_selfile->setText(QApplication::translate("ControlCenter", "\351\200\211\346\213\251 Flash \346\226\207\344\273\266", 0, QApplication::UnicodeUTF8));
+        isp_download->setText(QApplication::translate("ControlCenter", "\351\200\211\346\213\251 isp \346\226\207\344\273\266", 0, QApplication::UnicodeUTF8));
+        pb4_start->setText(QApplication::translate("ControlCenter", "\345\274\200\345\247\213\344\270\213\350\275\275", 0, QApplication::UnicodeUTF8));
+        groupBox_12->setTitle(QString());
+        only_download_flash->setText(QApplication::translate("ControlCenter", "\345\217\252\344\270\213\350\275\275flash\346\226\207\344\273\266", 0, QApplication::UnicodeUTF8));
+        all_download->setText(QApplication::translate("ControlCenter", "\345\205\250\351\203\250\344\270\213\350\275\275", 0, QApplication::UnicodeUTF8));
         tab2->setTabText(tab2->indexOf(tab_5), QApplication::translate("ControlCenter", "FX3", 0, QApplication::UnicodeUTF8));
         tab1->setTabText(tab1->indexOf(tab_3), QApplication::translate("ControlCenter", "\347\250\213\345\272\217\344\270\213\350\275\275", 0, QApplication::UnicodeUTF8));
         statusLabel->setText(QString());
@@ -1355,6 +1415,8 @@ public:
         label_20->setText(QApplication::translate("ControlCenter", "Device Type", 0, QApplication::UnicodeUTF8));
         label_devtype->setText(QApplication::translate("ControlCenter", "FX2", 0, QApplication::UnicodeUTF8));
         resetToMode->setText(QApplication::translate("ControlCenter", "\346\223\246flash", 0, QApplication::UnicodeUTF8));
+        isp_status_label->setText(QString());
+        cx3_status_label->setText(QString());
     } // retranslateUi
 
 };

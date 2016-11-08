@@ -21,6 +21,7 @@ extern int reset2Down();
 
 
 extern QStatusBar *sb;
+extern cyusb_handle *h;
 
 int sigusr1_fd[2];
 
@@ -35,6 +36,9 @@ ControlCenter::ControlCenter(QWidget *parent) : QWidget(parent)
     this->tab1->setTabEnabled(5,false);
     this->only_download_flash->setChecked(false);
     this->all_download->setChecked(true);
+    this->rb4_i2c->setEnabled(false);
+    this->rb4_ram->setEnabled(false);
+    this->rb4_spi->setEnabled(false);
     mThread = new Ota_Thread;
     mSpi_download[0] = new SPI_DOWNLOAD_THREAD;
     this->cx3_firmware_process_bar->setValue(0);
@@ -178,15 +182,18 @@ void ControlCenter::receiveOtaThreadStatus(QString msg, int returnValue)
 {
     qDebug()<< msg << returnValue ;
     if(msg == QString("sending firmware....")){
+        this->isp_download_proces_bar->setValue(returnValue);
         this->progressBar->setValue(returnValue);
     }
     this->statusLabel->setText(msg);
+    this->isp_status_label->setText(msg);
     this->statusLabel->show();
 
 }
 
 void ControlCenter::receiveSpiDownloadThreadStatus( QString status,int percent)
 {
+    int r = 0;
 # if 0
     if(status == QString("Erased sector")){
         this->cx3_status_label->setText((QString("固件擦除中")));
@@ -197,6 +204,14 @@ void ControlCenter::receiveSpiDownloadThreadStatus( QString status,int percent)
 #endif
        this->cx3_status_label->setText(status);
        this->cx3_firmware_process_bar->setValue(percent);
+
+    if(percent == 100 && this->cx3_status_label->text() == QString("firmware download ok")){
+         if(this->all_download->isChecked()){
+             if(cold_reset() == 0){
+                     QTimer::singleShot(4000, this, SLOT(single_slot_isp_download()));
+             }
+         }
+       }
 }
 
 void ControlCenter::receiveDownloadFailThreadStatus(QString status)
@@ -209,4 +224,10 @@ void ControlCenter::on_resetToMode_clicked()
     int rc = 0;
     //wangkf add
     rc= reset2Down();
+}
+
+void ControlCenter::single_slot_isp_download()
+{
+    mThread->setFileName(this->isp_file_name->text());
+    mThread->start();
 }
