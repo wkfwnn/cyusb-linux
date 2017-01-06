@@ -36,6 +36,9 @@ ControlCenter::ControlCenter(QWidget *parent) : QWidget(parent)
     this->tab1->setTabEnabled(5,false);
     this->only_download_flash->setChecked(false);
     this->all_download->setChecked(true);
+    this->rb4_i2c->setEnabled(false);
+    this->rb4_ram->setEnabled(false);
+    this->rb4_spi->setEnabled(false);
     mThread = new Ota_Thread;
     mSpi_download[0] = new SPI_DOWNLOAD_THREAD;
     this->cx3_firmware_process_bar->setValue(0);
@@ -205,9 +208,7 @@ void ControlCenter::receiveSpiDownloadThreadStatus( QString status,int percent)
     if(percent == 100 && this->cx3_status_label->text() == QString("firmware download ok")){
          if(this->all_download->isChecked()){
              if(cold_reset() == 0){
-                      sleep(4);
-                      mThread->setFileName(this->isp_file_name->text());
-                      mThread->start();
+                     QTimer::singleShot(4000, this, SLOT(single_slot_isp_download()));
              }
          }
        }
@@ -223,4 +224,10 @@ void ControlCenter::on_resetToMode_clicked()
     int rc = 0;
     //wangkf add
     rc= reset2Down();
+}
+
+void ControlCenter::single_slot_isp_download()
+{
+    mThread->setFileName(this->isp_file_name->text());
+    mThread->start();
 }

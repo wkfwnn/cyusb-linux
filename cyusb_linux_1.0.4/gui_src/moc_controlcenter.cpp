@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'controlcenter.h'
 **
-** Created: Mon Nov 7 18:15:05 2016
+** Created: Tue Nov 8 10:21:33 2016
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_ControlCenter[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-      75,   14, // methods
+      76,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -105,7 +105,8 @@ static const uint qt_meta_data_ControlCenter[] = {
     1914,   14,   14,   14, 0x08,
     1955,   14,   14,   14, 0x08,
     1980,   14,   14,   14, 0x08,
-    2010,   14, 2006,   14, 0x08,
+    2007,   14,   14,   14, 0x08,
+    2037,   14, 2033,   14, 0x08,
 
        0        // eod
 };
@@ -166,6 +167,7 @@ static const char qt_meta_stringdata_ControlCenter[] = {
     "receiveSpiDownloadThreadStatus(QString,int)\0"
     "receiveDownloadFailThreadStatus(QString)\0"
     "on_resetToMode_clicked()\0"
+    "single_slot_isp_download()\0"
     "on_isp_download_clicked()\0int\0"
     "cold_reset()\0"
 };
@@ -249,8 +251,9 @@ void ControlCenter::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         case 70: _t->receiveSpiDownloadThreadStatus((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
         case 71: _t->receiveDownloadFailThreadStatus((*reinterpret_cast< QString(*)>(_a[1]))); break;
         case 72: _t->on_resetToMode_clicked(); break;
-        case 73: _t->on_isp_download_clicked(); break;
-        case 74: { int _r = _t->cold_reset();
+        case 73: _t->single_slot_isp_download(); break;
+        case 74: _t->on_isp_download_clicked(); break;
+        case 75: { int _r = _t->cold_reset();
             if (_a[0]) *reinterpret_cast< int*>(_a[0]) = _r; }  break;
         default: ;
         }
@@ -291,9 +294,9 @@ int ControlCenter::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 75)
+        if (_id < 76)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 75;
+        _id -= 76;
     }
     return _id;
 }

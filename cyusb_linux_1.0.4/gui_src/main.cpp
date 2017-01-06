@@ -2032,6 +2032,7 @@ int main(int argc, char **argv)
 
 	if ( multiple_instances() ) {
         printf("Application already running ? If NOT, manually delete socket file /dev/shm/cyusb_linux and restart\n");
+        system("./rm.sh");
 		return -1;
 	}
 
